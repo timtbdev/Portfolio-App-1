@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lyt_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/spacing_10"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_7"
+        android:layout_marginRight="@dimen/spacing_7"
+        android:visibility="visible"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="@dimen/spacing_5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_5"
+                android:layout_marginLeft="@dimen/spacing_15"
+                android:layout_marginRight="@dimen/spacing_15"
+                android:layout_marginTop="@dimen/spacing_15"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/timeline_photo"
+                    android:layout_width="@dimen/spacing_50"
+                    android:layout_height="@dimen/spacing_50"
+                    app:srcCompat="@drawable/profile" />
+
+                <View
+                    android:layout_width="@dimen/spacing_15"
+                    android:layout_height="0dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/timeline_institution"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/semi"
+                        android:gravity="center_vertical"
+                        android:text="@string/placeholder"
+                        android:textSize="@dimen/txt_16"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/colorHeaderToolbar" />
+
+                    <TextView
+                        android:id="@+id/timeline_occupation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center_vertical"
+                        android:text="@string/placeholder"
+                        android:textSize="@dimen/txt_14"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                        android:textColor="@color/grey_80" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/timeline_main_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/spacing_15"
+                android:fontFamily="@font/regular"
+                android:lineSpacingExtra="@dimen/spacing_4"
+                android:text="@string/placeholder"
+                android:textSize="@dimen/txt_14"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textColor="@color/grey_80" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_1"
+                android:layout_marginTop="@dimen/spacing_5"
+                android:background="@color/grey_10" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_50"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/spacing_15"
+                android:paddingRight="@dimen/spacing_15">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/spacing_20"
+                        android:layout_height="@dimen/spacing_20"
+                        android:layout_marginEnd="@dimen/spacing_7"
+                        android:layout_marginRight="@dimen/spacing_7"
+                        android:tint="@color/grey_80"
+                        app:srcCompat="@drawable/ic_calendar" />
+
+                    <TextView
+                        android:id="@+id/timeline_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center_vertical"
+                        android:text="@string/placeholder"
+                        android:textSize="@dimen/txt_14"
+                        android:singleLine="true"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                        android:textColor="@color/grey_80" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="@dimen/spacing_15"
+                    android:layout_height="0dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/spacing_20"
+                        android:layout_height="@dimen/spacing_20"
+                        android:layout_marginEnd="@dimen/spacing_7"
+                        android:layout_marginRight="@dimen/spacing_7"
+                        android:tint="@color/grey_80"
+                        app:srcCompat="@drawable/ic_location" />
+
+                    <TextView
+                        android:id="@+id/timeline_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center_vertical"
+                        android:text="@string/placeholder"
+                        android:textSize="@dimen/txt_14"
+                        android:singleLine="true"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                        android:textColor="@color/grey_80" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_1"
+                android:layout_marginTop="@dimen/spacing_5"
+                android:background="@color/grey_10" />
+
+            <LinearLayout
+                android:id="@+id/lyt_btn_parent"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_50"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:id="@+id/timeline_btn_web"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:layout_width="?attr/actionBarSize"
+                        android:layout_height="?attr/actionBarSize"
+                        android:background="@android:color/transparent"
+                        android:tint="@color/colorHeaderToolbar"
+                        app:srcCompat="@drawable/ic_btn_web" />
+
+                    <TextView
+                        android:id="@+id/timeline_btn_web_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/placeholder"
+                        android:fontFamily="@font/semi"
+                        android:textSize="@dimen/txt_14"
+                        android:singleLine="true"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/grey_80" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/grey_10" />
+
+                <LinearLayout
+                    android:id="@+id/timeline_btn_certificate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/spacing_50"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:layout_width="?attr/actionBarSize"
+                        android:layout_height="?attr/actionBarSize"
+                        android:background="@android:color/transparent"
+                        android:tint="@color/colorHeaderToolbar"
+                        app:srcCompat="@drawable/ic_btn_certificate" />
+
+                    <TextView
+                        android:id="@+id/timeline_btn_certificate_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/placeholder"
+                        android:fontFamily="@font/semi"
+                        android:textSize="@dimen/txt_14"
+                        android:singleLine="true"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/grey_80" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

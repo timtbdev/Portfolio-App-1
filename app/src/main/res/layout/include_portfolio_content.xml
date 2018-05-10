@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nested_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_10"
+    android:clipToPadding="false"
+    android:scrollbars="vertical"
+    android:scrollingCache="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/spacing_240"
+            android:layout_weight="1">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@color/colorPortfolioItem" />
+
+            <LinearLayout
+                android:id="@+id/layout_dots"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/spacing_7"
+                android:gravity="end|center_vertical"
+                android:orientation="horizontal" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/spacing_7"
+            android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/placeholder"
+                    android:singleLine="true"
+                    android:fontFamily="@font/semi"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                    android:textColor="@color/colorHeaderToolbar"
+                    android:textStyle="bold" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/brief"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/grey_10"
+                android:paddingBottom="@dimen/spacing_5"
+                android:paddingLeft="@dimen/spacing_10"
+                android:paddingRight="@dimen/spacing_10"
+                android:paddingTop="@dimen/spacing_5"
+                android:layout_marginRight="@dimen/spacing_10"
+                android:text="@string/placeholder"
+                android:singleLine="true"
+                android:textSize="@dimen/txt_16"
+                android:fontFamily="@font/semi"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/colorHeaderToolbar"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/spacing_7"
+            android:paddingLeft="@dimen/spacing_10"
+            android:paddingStart="@dimen/spacing_10"
+            android:paddingBottom="@dimen/spacing_7">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="@dimen/spacing_16"
+                android:layout_height="@dimen/spacing_16"
+                app:srcCompat="@drawable/ic_calendar"
+                android:tint="@color/grey_80" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_5"
+                android:layout_marginRight="@dimen/spacing_5"
+                android:text="@string/placeholder"
+                android:fontFamily="@font/regular"
+                android:textSize="@dimen/txt_16"
+                android:singleLine="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textColor="@color/grey_80" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/spacing_0"
+            android:layout_height="@dimen/spacing_5" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/colorPortfolioItem"
+            android:padding="@dimen/spacing_7">
+
+            <Button
+                android:id="@+id/url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/placeholder"
+                android:fontFamily="@font/semi"
+                android:theme="@style/Button.Primary" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spacing_1"
+            android:background="@color/grey_10" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:padding="@dimen/spacing_7"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/spacing_18"
+                    android:layout_height="@dimen/spacing_18"
+                    app:srcCompat="@drawable/ic_web"
+                    android:tint="@color/grey_80" />
+
+                <TextView
+                    android:id="@+id/title_features"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/semi"
+                    android:text="@string/placeholder"
+                    android:textSize="@dimen/txt_16"
+                    android:textAllCaps="true"
+                    android:textColor="@color/grey_80"
+                    android:paddingLeft="@dimen/spacing_5"
+                    android:paddingStart="@dimen/spacing_5"
+                    android:layout_margin="@dimen/spacing_2" />
+
+            </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spacing_1"
+            android:background="@color/grey_10" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:paddingBottom="@dimen/spacing_15"
+            android:paddingLeft="@dimen/spacing_5"
+            android:paddingStart="@dimen/spacing_5"
+            android:paddingRight="@dimen/spacing_5"
+            android:paddingEnd="@dimen/spacing_5"
+            android:paddingTop="@dimen/spacing_7">
+
+            <TextView
+                android:id="@+id/features"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:text="@string/long_placeholder"
+                android:textSize="@dimen/txt_16"
+                android:layout_margin="@dimen/spacing_2" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spacing_1"
+            android:background="@color/grey_10" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:padding="@dimen/spacing_7"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/spacing_18"
+                android:layout_height="@dimen/spacing_18"
+                app:srcCompat="@drawable/ic_portfolio"
+                android:tint="@color/grey_80" />
+
+            <TextView
+                android:id="@+id/title_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/semi"
+                android:text="@string/placeholder"
+                android:textSize="@dimen/txt_16"
+                android:textAllCaps="true"
+                android:textColor="@color/grey_80"
+                android:paddingLeft="@dimen/spacing_5"
+                android:paddingStart="@dimen/spacing_5"
+                android:layout_margin="@dimen/spacing_2" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spacing_1"
+            android:background="@color/grey_10" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:paddingBottom="@dimen/spacing_15"
+            android:paddingLeft="@dimen/spacing_5"
+            android:paddingStart="@dimen/spacing_5"
+            android:paddingRight="@dimen/spacing_5"
+            android:paddingEnd="@dimen/spacing_5"
+            android:paddingTop="@dimen/spacing_7">
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:text="@string/long_placeholder"
+                android:textSize="@dimen/txt_16"
+                android:layout_margin="@dimen/spacing_2" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/spacing_0"
+            android:layout_height="@dimen/spacing_5" />
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

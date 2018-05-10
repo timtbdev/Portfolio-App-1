@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1085721360314",
+    "firebase_url": "https://resume-app-9044a.firebaseio.com",
+    "project_id": "resume-app-9044a",
+    "storage_bucket": "resume-app-9044a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1085721360314:android:6f29efdc696b1605",
+        "android_client_info": {
+          "package_name": "info.tumur.resume.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1085721360314-d71sv6pj2mbde1ll5e0gmorvomedb7o9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9wzA0iuk77mJhXGc4x3B5bXSP4c-Cw6g"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

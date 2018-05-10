@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:minWidth="@dimen/dialog_min_width"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorHeaderToolbar"
+        android:gravity="center"
+        android:minHeight="@dimen/dialog_header_height"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="@dimen/dialog_header_image"
+            android:layout_height="@dimen/dialog_header_image"
+            app:srcCompat="@drawable/img_no_internet" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|start"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_20">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/placeholder"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/colorHeaderText" />
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_3"
+            android:text="@string/placeholder"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorHeaderText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lyt_action"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_10"
+        android:gravity="end|right"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/spacing_15"
+        android:paddingRight="@dimen/spacing_15">
+
+        <Button
+            android:id="@+id/bt_positive"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/got_it"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="@color/colorHeaderText"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

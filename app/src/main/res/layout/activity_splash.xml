@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/avatar"
+        android:layout_width="@dimen/spacing_100"
+        android:layout_height="@dimen/spacing_100"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/spacing_100"
+        android:src="@drawable/profile"
+        android:layout_marginBottom="@dimen/spacing_5"
+        app:civ_border_color="@color/colorAvatarBorder"
+        app:civ_border_width="@dimen/spacing_2" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/avatar"
+        android:layout_marginTop="@dimen/spacing_10"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_10"
+            android:gravity="center"
+            android:text="@string/name"
+            android:fontFamily="@font/semi"
+            android:textAllCaps="true"
+            android:textSize="@dimen/txt_20"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/white" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/spacing_10"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/spacing_16"
+                android:layout_height="@dimen/spacing_16"
+                android:layout_marginEnd="@dimen/spacing_5"
+                android:layout_marginRight="@dimen/spacing_5"
+                android:tint="@color/colorHeaderSmallText"
+                app:srcCompat="@drawable/ic_android" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/android"
+                android:fontFamily="@font/regular"
+                android:textSize="@dimen/txt_16"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/spacing_25"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/spacing_16"
+                android:layout_height="@dimen/spacing_16"
+                android:layout_marginEnd="@dimen/spacing_5"
+                android:layout_marginRight="@dimen/spacing_5"
+                android:tint="@color/colorHeaderSmallText"
+                app:srcCompat="@drawable/ic_location" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/location"
+                android:fontFamily="@font/regular"
+                android:textSize="@dimen/txt_16"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminateTint="@color/colorSplashLoader"
+            android:layout_marginBottom="@dimen/spacing_25" />
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

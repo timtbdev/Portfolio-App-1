@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    // Custom color
+    <color name="colorBackground">#D6D6D6</color>
+    <color name="colorHeaderToolbar">#2A2E41</color>
+    <color name="colorHeaderText">#37474F</color>
+    <color name="colorSplashLoader">#CBCBCB</color>
+    <color name="colorHeaderSmallText">#E6FFFFFF</color>
+    <color name="colorHeaderBackgroundOverlay">#33000000</color>
+    <color name="overlay_dark_portfolio">#4D000000</color>
+    <color name="colorHeaderDrawerBackgroundOverlay">#66000000</color>
+    <color name="colorAvatarBorder">#B3FFFFFF</color>
+    <color name="colorButtonBackground">#f6f6f6</color>
+    <color name="colorPortfolioItem">#EEF1F6</color>
+
+
+    <color name="colorPrimary">#2A2E41</color>
+    <color name="colorPrimaryDark">#2A2E41</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimaryLight">#5DBA60</color>
+
+    <color name="grey_10">#e6e6e6</color>
+    <color name="grey_80">#37474F</color>
+    <color name="overlay_dark_10">#1A000000</color>
+    <color name="overlay_dark_20">#33000000</color>
+    <color name="darkOverlaySoft">#40000000</color>
+
+
+    <!--Material color list from https://material.io/guidelines/style/color.html-->
+
+    <color name="blue_grey_600">#546E7A</color>
+
+
+    <!--for random color generator -->
+
+</resources>

@@ -1,0 +1,48 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="nav_drawer_header_height">172dp</dimen>dialog_min_width
+    <dimen name="dialog_header_height">120dp</dimen>
+    <dimen name="dialog_min_width">270dp</dimen>
+    <dimen name="dialog_header_image">80dp</dimen>
+
+    <!--text size-->
+    <dimen name="txt_20">20sp</dimen>
+    <dimen name="txt_18">18sp</dimen>
+    <dimen name="txt_16">16sp</dimen>
+    <dimen name="txt_14">14sp</dimen>
+
+    <!--genaral spacing-->
+    <dimen name="spacing_0">0dp</dimen>
+    <dimen name="spacing_1">1dp</dimen>
+    <dimen name="spacing_2">2dp</dimen>
+    <dimen name="spacing_3">3dp</dimen>
+    <dimen name="spacing_4">4dp</dimen>
+    <dimen name="spacing_5">5dp</dimen>
+    <dimen name="spacing_7">7dp</dimen>
+    <dimen name="spacing_8">8dp</dimen>
+    <dimen name="spacing_10">10dp</dimen>
+    <dimen name="spacing_14">14dp</dimen>
+    <dimen name="spacing_16">16dp</dimen>
+    <dimen name="spacing_15">15dp</dimen>
+    <dimen name="spacing_18">18dp</dimen>
+    <dimen name="spacing_20">20dp</dimen>
+    <dimen name="spacing_25">25dp</dimen>
+    <dimen name="spacing_35">35dp</dimen>
+    <dimen name="spacing_40">40dp</dimen>
+    <dimen name="spacing_50">50dp</dimen>
+    <dimen name="spacing_56">56dp</dimen>
+    <dimen name="spacing_64">64dp</dimen>
+    <dimen name="spacing_80">80dp</dimen>
+    <dimen name="spacing_100">100dp</dimen>
+    <dimen name="spacing_150">150dp</dimen>
+    <dimen name="spacing_170">170dp</dimen>
+    <dimen name="spacing_180">180dp</dimen>
+    <dimen name="spacing_200">200dp</dimen>
+    <dimen name="spacing_240">240dp</dimen>
+    <dimen name="spacing_300">300dp</dimen>
+    <dimen name="spacing_190">190dp</dimen>
+
+    <!--header spacing-->
+    <dimen name="spacing_drawer_header">168dp</dimen>
+
+</resources>
