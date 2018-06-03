@@ -13,7 +13,6 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.firebase.analytics.FirebaseAnalytics;
@@ -63,21 +62,20 @@ public class ActivityPortfolio extends AppCompatActivity {
 
     private void initToolbar() {
         ActionBar actionBar;
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setHomeButtonEnabled(true);
-        actionBar.setTitle(getResources().getString(R.string.main_menu_portfolio));
+        actionBar.setTitle(getResources().getString(R.string.txt_main_menu_portfolio));
         Tools.systemBarLolipop(this);
     }
 
     private void initComponent() {
-        swipe_refresh = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh_layout);
-        recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        swipe_refresh = findViewById(R.id.swipe_refresh_layout);
+        recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
-        recyclerView.setNestedScrollingEnabled(false);
 
         //set data and list adapter
         mAdapter = new AdapterPortfolio(this, recyclerView, new ArrayList<Portfolio>());
@@ -91,6 +89,7 @@ public class ActivityPortfolio extends AppCompatActivity {
                 mAdapter.resetListData();
                 requestAction();
             }
+
         });
 
         // on item list clicked
@@ -147,9 +146,9 @@ public class ActivityPortfolio extends AppCompatActivity {
     private void onFailRequest() {
         swipeProgress(false);
         if (NetworkCheck.isConnect(this)) {
-            showFailedView(true, getString(R.string.failed_text));
+            showFailedView(true, getString(R.string.txt_failed));
         } else {
-            showFailedView(true, getString(R.string.no_internet_text));
+            showFailedView(true, getString(R.string.txt_no_internet));
         }
     }
 
@@ -175,7 +174,7 @@ public class ActivityPortfolio extends AppCompatActivity {
     }
 
     private void showFailedView(boolean show, String message) {
-        View lyt_failed = (View) findViewById(R.id.lyt_failed);
+        View lyt_failed = findViewById(R.id.lyt_failed);
         ((TextView) findViewById(R.id.failed_message)).setText(message);
         if (show) {
             recyclerView.setVisibility(View.GONE);
@@ -184,7 +183,7 @@ public class ActivityPortfolio extends AppCompatActivity {
             recyclerView.setVisibility(View.VISIBLE);
             lyt_failed.setVisibility(View.GONE);
         }
-        ((Button) findViewById(R.id.failed_retry)).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.failed_retry).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 requestAction();
@@ -193,7 +192,7 @@ public class ActivityPortfolio extends AppCompatActivity {
     }
 
     private void showNoItemView(boolean show) {
-        View lyt_no_item = (View) findViewById(R.id.lyt_no_item);
+        View lyt_no_item = findViewById(R.id.lyt_no_item);
         if (show) {
             recyclerView.setVisibility(View.GONE);
             lyt_no_item.setVisibility(View.VISIBLE);

@@ -18,7 +18,7 @@ public interface API {
     String CACHE = "Cache-Control: max-age=0";
     String AGENT = "User-Agent: Tumur";
 
-    /* Recipe API transaction ------------------------------- */
+    /* API transaction */
 
     @Headers({CACHE, AGENT})
     @GET("services/check")

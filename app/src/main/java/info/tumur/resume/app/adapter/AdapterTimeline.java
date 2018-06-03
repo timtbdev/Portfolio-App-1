@@ -25,61 +25,18 @@ public class AdapterTimeline extends RecyclerView.Adapter<RecyclerView.ViewHolde
     private final int VIEW_PROG = 0;
 
     private List<Timeline> items = new ArrayList<>();
-    private boolean loading;
     private Context ctx;
 
     private OnItemClickListener onItemClickListener;
 
-    public interface OnItemClickListener {
-        void onItemClick(View view, Timeline obj);
-    }
-
-    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
-        this.onItemClickListener = onItemClickListener;
-    }
-
-    // Provide a suitable constructor (depends on the kind of dataset)
+    // Provide a suitable constructor
     public AdapterTimeline(Context context, RecyclerView view, List<Timeline> items) {
         this.items = items;
         ctx = context;
     }
 
-    public class OriginalViewHolder extends RecyclerView.ViewHolder {
-        // each data item is just a string in this case
-        public ImageView timeline_photo;
-        public TextView timeline_institution;
-        public TextView timeline_occupation;
-        public TextView timeline_main_content;
-        public TextView timeline_date;
-        public TextView timeline_location;
-        public TextView timeline_btn_web_text;
-        public TextView timeline_btn_certificate_text;
-        public LinearLayout timeline_btn_web;
-        public LinearLayout timeline_btn_certificate;
-
-        public OriginalViewHolder(View v) {
-            super(v);
-            timeline_photo = (ImageView) v.findViewById(R.id.timeline_photo);
-            timeline_institution= (TextView) v.findViewById(R.id.timeline_institution);
-            timeline_occupation= (TextView) v.findViewById(R.id.timeline_occupation);
-            timeline_main_content = (TextView) v.findViewById(R.id.timeline_main_content);
-            timeline_date = (TextView) v.findViewById(R.id.timeline_date);
-            timeline_location = (TextView) v.findViewById(R.id.timeline_location);
-            timeline_btn_web_text = (TextView) v.findViewById(R.id.timeline_btn_web_text);
-            timeline_btn_certificate_text = (TextView) v.findViewById(R.id.timeline_btn_certificate_text);
-            timeline_btn_web = (LinearLayout) v.findViewById(R.id.timeline_btn_web);
-            timeline_btn_certificate = (LinearLayout) v.findViewById(R.id.timeline_btn_certificate);
-        }
-    }
-
-
-    public static class ProgressViewHolder extends RecyclerView.ViewHolder {
-        public ProgressBar progressBar;
-
-        public ProgressViewHolder(View v) {
-            super(v);
-            progressBar = (ProgressBar) v.findViewById(R.id.progress_loading);
-        }
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
+        this.onItemClickListener = onItemClickListener;
     }
 
     @Override
@@ -95,13 +52,13 @@ public class AdapterTimeline extends RecyclerView.Adapter<RecyclerView.ViewHolde
         return vh;
     }
 
-    // Replace the contents of a view (invoked by the layout manager)
+    // Replace the contents of a view
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
         if (holder instanceof OriginalViewHolder) {
             final Timeline t = items.get(position);
             OriginalViewHolder vItem = (OriginalViewHolder) holder;
-            Tools.displayImageThumbnail(ctx, vItem.timeline_photo, Constant.getURLimg(t.timeline_photo), 0.5f);
+            Tools.displayImageThumbnail(ctx, vItem.timeline_photo, Constant.getURLimg(t.timeline_photo), 0.1f);
             vItem.timeline_institution.setText(t.timeline_institution);
             vItem.timeline_occupation.setText(t.timeline_occupation);
             vItem.timeline_main_content.setText(Html.fromHtml(t.timeline_main_content));
@@ -133,7 +90,7 @@ public class AdapterTimeline extends RecyclerView.Adapter<RecyclerView.ViewHolde
         }
     }
 
-    // Return the size of your dataset (invoked by the layout manager)
+    // Return the size of your dataset
     @Override
     public int getItemCount() {
         return items.size();
@@ -152,6 +109,46 @@ public class AdapterTimeline extends RecyclerView.Adapter<RecyclerView.ViewHolde
     public void resetListData() {
         this.items = new ArrayList<>();
         notifyDataSetChanged();
+    }
+
+    public interface OnItemClickListener {
+        void onItemClick(View view, Timeline obj);
+    }
+
+    public static class ProgressViewHolder extends RecyclerView.ViewHolder {
+        public ProgressBar progressBar;
+
+        public ProgressViewHolder(View v) {
+            super(v);
+            progressBar = v.findViewById(R.id.progress_loading);
+        }
+    }
+
+    public class OriginalViewHolder extends RecyclerView.ViewHolder {
+        public ImageView timeline_photo;
+        public TextView timeline_institution;
+        public TextView timeline_occupation;
+        public TextView timeline_main_content;
+        public TextView timeline_date;
+        public TextView timeline_location;
+        public TextView timeline_btn_web_text;
+        public TextView timeline_btn_certificate_text;
+        public LinearLayout timeline_btn_web;
+        public LinearLayout timeline_btn_certificate;
+
+        public OriginalViewHolder(View v) {
+            super(v);
+            timeline_photo = v.findViewById(R.id.timeline_photo);
+            timeline_institution = v.findViewById(R.id.timeline_institution);
+            timeline_occupation = v.findViewById(R.id.timeline_occupation);
+            timeline_main_content = v.findViewById(R.id.timeline_main_content);
+            timeline_date = v.findViewById(R.id.timeline_date);
+            timeline_location = v.findViewById(R.id.timeline_location);
+            timeline_btn_web_text = v.findViewById(R.id.timeline_btn_web_text);
+            timeline_btn_certificate_text = v.findViewById(R.id.timeline_btn_certificate_text);
+            timeline_btn_web = v.findViewById(R.id.timeline_btn_web);
+            timeline_btn_certificate = v.findViewById(R.id.timeline_btn_certificate);
+        }
     }
 
 }

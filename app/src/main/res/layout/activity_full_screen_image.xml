@@ -13,24 +13,24 @@
 
     <ImageButton
         android:id="@+id/btnClose"
+        style="@style/Base.Widget.AppCompat.Button.Borderless"
         android:layout_width="@dimen/spacing_50"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/spacing_7"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
+        android:layout_margin="@dimen/spacing_7"
         android:tint="@android:color/white"
-        style="@style/Base.Widget.AppCompat.Button.Borderless"
         app:srcCompat="@drawable/ic_clear" />
 
     <TextView
         android:id="@+id/text_page"
-        android:background="@drawable/shape_overlay"
         android:layout_width="match_parent"
-        android:minHeight="@dimen/spacing_50"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:textColor="@android:color/white"
+        android:background="@drawable/shape_overlay"
+        android:gravity="center"
+        android:minHeight="@dimen/spacing_50"
         android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-        android:gravity="center"/>
+        android:textColor="@android:color/white" />
 
 </RelativeLayout>

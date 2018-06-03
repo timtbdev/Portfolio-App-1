@@ -23,34 +23,14 @@ public class AdapterPortfolio extends RecyclerView.Adapter<RecyclerView.ViewHold
     private Context ctx;
     private OnItemClickListener mOnItemClickListener;
 
-    public interface OnItemClickListener {
-        void onItemClick(View view, Portfolio obj, int position);
-    }
-
-    public void setOnItemClickListener(final OnItemClickListener mItemClickListener) {
-        this.mOnItemClickListener = mItemClickListener;
-    }
-
+    // Provide a suitable constructor
     public AdapterPortfolio(Context context, RecyclerView view, List<Portfolio> items) {
         this.items = items;
         ctx = context;
     }
 
-    public class OriginalViewHolder extends RecyclerView.ViewHolder {
-        public ImageView image_bg;
-        public ImageView category;
-        public TextView title;
-        public TextView brief;
-        public View lyt_parent;
-
-        public OriginalViewHolder(View v) {
-            super(v);
-            image_bg = (ImageView) v.findViewById(R.id.image);
-            title = (TextView) v.findViewById(R.id.title);
-            brief = (TextView) v.findViewById(R.id.brief);
-            category = (ImageView) v.findViewById(R.id.category);
-            lyt_parent = (View) v.findViewById(R.id.lyt_parent);
-        }
+    public void setOnItemClickListener(final OnItemClickListener mItemClickListener) {
+        this.mOnItemClickListener = mItemClickListener;
     }
 
     @Override
@@ -61,7 +41,6 @@ public class AdapterPortfolio extends RecyclerView.Adapter<RecyclerView.ViewHold
         return vh;
     }
 
-    // Replace the contents of a view (invoked by the layout manager)
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
         if (holder instanceof OriginalViewHolder) {
@@ -80,7 +59,7 @@ public class AdapterPortfolio extends RecyclerView.Adapter<RecyclerView.ViewHold
                 default:
                     break;
             }
-            Tools.displayImageThumbnail(ctx, view.image_bg, Constant.getURLimg(p.image_bg), 0.5f);
+            Tools.displayImageThumbnail(ctx, view.image_bg, Constant.getURLimg(p.image_bg), 0.1f);
             view.lyt_parent.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -105,6 +84,27 @@ public class AdapterPortfolio extends RecyclerView.Adapter<RecyclerView.ViewHold
     public void resetListData() {
         this.items = new ArrayList<>();
         notifyDataSetChanged();
+    }
+
+    public interface OnItemClickListener {
+        void onItemClick(View view, Portfolio obj, int position);
+    }
+
+    public class OriginalViewHolder extends RecyclerView.ViewHolder {
+        public ImageView image_bg;
+        public ImageView category;
+        public TextView title;
+        public TextView brief;
+        public View lyt_parent;
+
+        public OriginalViewHolder(View v) {
+            super(v);
+            image_bg = v.findViewById(R.id.image);
+            title = v.findViewById(R.id.title);
+            brief = v.findViewById(R.id.brief);
+            category = v.findViewById(R.id.category);
+            lyt_parent = v.findViewById(R.id.lyt_parent);
+        }
     }
 
 }

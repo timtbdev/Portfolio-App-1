@@ -44,7 +44,7 @@ public class FragmentContact extends Fragment {
     }
 
     private void initComponent() {
-        recyclerView = (RecyclerView) root_view.findViewById(R.id.recyclerView);
+        recyclerView = root_view.findViewById(R.id.recyclerView);
         //recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), Tools.getGridSpanCount(getActivity())));
         recyclerView.setHasFixedSize(true);
@@ -102,7 +102,7 @@ public class FragmentContact extends Fragment {
         if (NetworkCheck.isConnect(getActivity())) {
             showFailedView(R.string.msg_failed_load_data);
         } else {
-            showFailedView(R.string.no_internet_text);
+            showFailedView(R.string.txt_no_internet);
         }
     }
 

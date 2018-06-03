@@ -3,7 +3,6 @@ package info.tumur.resume.app.adapter;
 import android.app.Activity;
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,18 +25,14 @@ public class AdapterPortfolioImage extends PagerAdapter {
 
     private OnItemClickListener onItemClickListener;
 
-    public interface OnItemClickListener {
-        void onItemClick(View view, PortfolioImage obj, int position);
+    // Provide a suitable constructor
+    public AdapterPortfolioImage(Activity activity, List<PortfolioImage> items) {
+        this.act = activity;
+        this.items = items;
     }
 
     public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
         this.onItemClickListener = onItemClickListener;
-    }
-
-    // constructor
-    public AdapterPortfolioImage(Activity activity, List<PortfolioImage> items) {
-        this.act = activity;
-        this.items = items;
     }
 
     @Override
@@ -56,16 +51,17 @@ public class AdapterPortfolioImage extends PagerAdapter {
 
     @Override
     public boolean isViewFromObject(View view, Object object) {
-        return view == ((RelativeLayout) object);
+        return view == object;
     }
 
+    // Replace the contents of a view
     @Override
     public Object instantiateItem(ViewGroup container, final int position) {
         final PortfolioImage o = items.get(position);
         LayoutInflater inflater = (LayoutInflater) act.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View v = inflater.inflate(R.layout.item_portfolio_image, container, false);
-        ImageView image = (ImageView) v.findViewById(R.id.image);
-        MaterialRippleLayout lyt_parent = (MaterialRippleLayout) v.findViewById(R.id.lyt_parent);
+        ImageView image = v.findViewById(R.id.image);
+        MaterialRippleLayout lyt_parent = v.findViewById(R.id.lyt_parent);
         Tools.displayImageOriginal(act, image, Constant.getURLimg(o.name));
         lyt_parent.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,15 +72,19 @@ public class AdapterPortfolioImage extends PagerAdapter {
             }
         });
 
-        ((ViewPager) container).addView(v);
+        container.addView(v);
 
         return v;
     }
 
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
-        ((ViewPager) container).removeView((RelativeLayout) object);
+        container.removeView((RelativeLayout) object);
 
+    }
+
+    public interface OnItemClickListener {
+        void onItemClick(View view, PortfolioImage obj, int position);
     }
 
 }

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/lyt_parent"
     android:layout_width="match_parent"
@@ -30,8 +29,7 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <com.mikhaellopez.circularimageview.CircularImageView
-                xmlns:app="http://schemas.android.com/apk/res-auto"
+            <com.mikhaellopez.circularimageview.CircularImageView xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/summary_avatar"
                 android:layout_width="@dimen/spacing_100"
                 android:layout_height="@dimen/spacing_100"
@@ -43,7 +41,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/semi"
-                android:text="@string/placeholder"
                 android:textAppearance="@style/TextAppearance.AppCompat.Title"
                 android:textColor="@color/colorHeaderSmallText" />
 
@@ -67,10 +64,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/semi"
-                    android:textSize="@dimen/txt_16"
-                    android:text="@string/placeholder"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:textColor="@color/colorHeaderSmallText" />
+                    android:textColor="@color/colorHeaderSmallText"
+                    android:textSize="@dimen/txt_16" />
             </LinearLayout>
 
             <LinearLayout
@@ -94,10 +90,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/semi"
-                    android:textSize="@dimen/txt_16"
-                    android:text="@string/placeholder"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:textColor="@color/colorHeaderSmallText" />
+                    android:textColor="@color/colorHeaderSmallText"
+                    android:textSize="@dimen/txt_16" />
             </LinearLayout>
 
 

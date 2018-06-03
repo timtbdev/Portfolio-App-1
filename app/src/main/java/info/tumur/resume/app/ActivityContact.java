@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.StringRes;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
@@ -16,7 +15,6 @@ import android.support.v7.app.AppCompatDelegate;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 
 import com.google.firebase.analytics.FirebaseAnalytics;
@@ -33,8 +31,8 @@ public class ActivityContact extends AppCompatActivity {
     private ActionBar actionBar;
     private Toolbar toolbar;
     private RelativeLayout lyt_parent;
-    private ProgressBar progressBar;
-    private final static int LOADING_DURATION = 500;
+    private final static int LOADING_DURATION = 1000;
+    private RelativeLayout progressBar;
     private View parent_view;
     private NavigationView nav_view;
     private Dialog dialog_failed = null;
@@ -53,11 +51,14 @@ public class ActivityContact extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         // Obtain the FirebaseAnalytics instance.
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
+
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
         setContentView(R.layout.activity_contact);
         activityContact = this;
+
         initComponent();
         showProgressBar();
         initToolbar();
@@ -66,12 +67,12 @@ public class ActivityContact extends AppCompatActivity {
 
     private void initToolbar() {
         ActionBar actionBar;
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setHomeButtonEnabled(true);
-        actionBar.setTitle(getResources().getString(R.string.main_menu_contact));
+        actionBar.setTitle(getResources().getString(R.string.txt_main_menu_contact));
         Tools.systemBarLolipop(this);
     }
 
@@ -131,14 +132,13 @@ public class ActivityContact extends AppCompatActivity {
     public void showDataLoaded() {
         if (s_header && s_contact) {
             hideProgressBar();
-            Snackbar.make(parent_view, R.string.msg_data_loaded, Snackbar.LENGTH_SHORT).show();
         }
     }
 
     public void showDialogFailed(@StringRes int msg) {
         if (dialog_failed != null && dialog_failed.isShowing()) return;
         hideProgressBar();
-        dialog_failed = new DialogUtils(this).buildDialogWarning(-1, msg, R.string.try_again, R.drawable.img_no_connect, new CallbackDialog() {
+        dialog_failed = new DialogUtils(this).buildDialogWarning(-1, msg, R.string.txt_try_again, R.drawable.img_no_connect, new CallbackDialog() {
             @Override
             public void onPositiveClick(Dialog dialog) {
                 dialog.dismiss();

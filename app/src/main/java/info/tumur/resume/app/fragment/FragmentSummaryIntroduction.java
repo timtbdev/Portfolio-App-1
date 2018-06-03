@@ -19,6 +19,7 @@ import info.tumur.resume.app.utils.NetworkCheck;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+
 public class FragmentSummaryIntroduction extends Fragment {
 
     private View root_view;
@@ -63,7 +64,7 @@ public class FragmentSummaryIntroduction extends Fragment {
         if (NetworkCheck.isConnect(getActivity())) {
             showFailedView(R.string.msg_failed_load_data);
         } else {
-            showFailedView(R.string.no_internet_text);
+            showFailedView(R.string.txt_no_internet);
         }
     }
 

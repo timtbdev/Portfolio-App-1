@@ -7,7 +7,6 @@
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <ImageView
-        android:id="@+id/drawer_bg"
         android:layout_width="match_parent"
         android:layout_height="@dimen/spacing_drawer_header"
         android:foreground="@color/colorHeaderDrawerBackgroundOverlay"
@@ -22,7 +21,6 @@
         android:orientation="vertical">
 
         <com.mikhaellopez.circularimageview.CircularImageView
-            android:id="@+id/drawer_avatar"
             android:layout_width="@dimen/spacing_64"
             android:layout_height="@dimen/spacing_64"
             android:layout_marginBottom="@dimen/spacing_7"
@@ -31,12 +29,11 @@
             app:civ_border_width="@dimen/spacing_2" />
 
         <TextView
-            android:id="@+id/drawer_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/spacing_3"
             android:fontFamily="@font/semi"
-            android:text="@string/name"
+            android:text="@string/txt_name"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
         <LinearLayout
@@ -55,11 +52,10 @@
                 app:srcCompat="@drawable/ic_android" />
 
             <TextView
-                android:id="@+id/drawer_android"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/semi"
-                android:text="@string/android"
+                android:text="@string/txt_android"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
         </LinearLayout>
@@ -80,12 +76,11 @@
                 app:srcCompat="@drawable/ic_location" />
 
             <TextView
-                android:id="@+id/drawer_web"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/semi"
                 android:paddingRight="@dimen/spacing_10"
-                android:text="@string/location"
+                android:text="@string/txt_location"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
         </LinearLayout>

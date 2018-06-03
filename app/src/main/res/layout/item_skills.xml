@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/lyt_parent"
     android:layout_width="match_parent"
@@ -10,7 +9,7 @@
 
     <View
         android:layout_width="@dimen/spacing_15"
-        android:layout_height="0dp" />
+        android:layout_height="@dimen/spacing_0" />
 
     <ImageView
         android:layout_width="@dimen/spacing_15"
@@ -25,7 +24,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="@string/placeholder"
         android:fontFamily="@font/regular"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
         android:textColor="@color/grey_80" />
@@ -34,13 +32,12 @@
         android:id="@+id/skill_description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/placeholder"
         android:fontFamily="@font/regular"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
         android:textColor="@color/grey_80" />
 
     <View
         android:layout_width="@dimen/spacing_15"
-        android:layout_height="0dp" />
+        android:layout_height="@dimen/spacing_0" />
 
 </LinearLayout>

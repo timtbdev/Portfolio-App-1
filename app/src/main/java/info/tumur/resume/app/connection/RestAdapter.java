@@ -20,7 +20,7 @@ public class RestAdapter {
         builder.connectTimeout(5, TimeUnit.SECONDS);
         builder.writeTimeout(10, TimeUnit.SECONDS);
         builder.readTimeout(30, TimeUnit.SECONDS);
-        if(BuildConfig.DEBUG){
+        if (BuildConfig.DEBUG) {
             builder.addInterceptor(logging);
         }
         builder.cache(null);

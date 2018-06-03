@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -17,17 +16,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/spacing_10"
-            android:text="@string/title_no_internet"
+            android:text="@string/txt_no_internet"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/colorHeaderText" />
 
         <Button
             android:id="@+id/failed_retry"
             style="@style/Widget.AppCompat.Button.Colored"
-            android:background="@color/colorHeaderText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/try_again" />
+            android:background="@color/colorHeaderText"
+            android:text="@string/txt_try_again" />
     </LinearLayout>
 
 </RelativeLayout>

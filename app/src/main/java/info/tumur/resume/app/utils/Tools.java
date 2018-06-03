@@ -27,8 +27,6 @@ import java.util.Locale;
 
 import info.tumur.resume.app.R;
 
-import static com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withCrossFade;
-
 public class Tools {
 
     public static boolean needRequestPermission() {
@@ -87,7 +85,7 @@ public class Tools {
         try {
             activity.startActivity(Intent.createChooser(goToShare, "Share this app via ..."));
         } catch (ActivityNotFoundException e) {
-            //activity.startActivity(new Intent(Intent.ACTION_SEND, Uri.parse("http://play.google.com/store/apps/details?id=" + activity.getPackageName())));
+            activity.startActivity(new Intent(Intent.ACTION_SEND, Uri.parse("http://play.google.com/store/apps/details?id=" + activity.getPackageName())));
         }
     }
 
@@ -105,8 +103,7 @@ public class Tools {
     public static void displayImageOriginal(Context ctx, ImageView img, String url) {
         try {
             Glide.with(ctx).load(url)
-                    .apply(new RequestOptions().diskCacheStrategy(DiskCacheStrategy.ALL))
-                    .transition(withCrossFade())
+                    .apply(new RequestOptions().diskCacheStrategy(DiskCacheStrategy.NONE))
                     .into(img);
         } catch (Exception e) {
         }
@@ -115,8 +112,8 @@ public class Tools {
     public static void displayImageOriginalCircle(Context ctx, ImageView img, String url) {
         try {
             Glide.with(ctx).load(url)
-                    .apply(new RequestOptions().diskCacheStrategy(DiskCacheStrategy.ALL))
-                    .apply(RequestOptions.placeholderOf(R.drawable.placeholder))
+                    .apply(new RequestOptions().diskCacheStrategy(DiskCacheStrategy.NONE))
+                    .apply(RequestOptions.placeholderOf(R.drawable.loading_placeholder))
                     .into(img);
         } catch (Exception e) {
         }
@@ -125,8 +122,8 @@ public class Tools {
     public static void displayImageThumbnail(Context ctx, ImageView img, String url, float thumb) {
         try {
             Glide.with(ctx).load(url)
-                    .apply(new RequestOptions().diskCacheStrategy(DiskCacheStrategy.ALL))
-                    .apply(RequestOptions.placeholderOf(R.drawable.placeholder))
+                    .apply(new RequestOptions().diskCacheStrategy(DiskCacheStrategy.NONE))
+                    .apply(RequestOptions.placeholderOf(R.drawable.loading_placeholder))
                     .thumbnail(thumb)
                     .into(img);
         } catch (Exception e) {

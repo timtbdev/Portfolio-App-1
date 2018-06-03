@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/lyt_parent"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="@dimen/spacing_10"
     android:gravity="center_vertical"
     android:orientation="vertical">
+
+    <View
+        android:layout_width="@dimen/spacing_0"
+        android:layout_height="@dimen/spacing_5" />
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/spacing_7"
         android:layout_marginRight="@dimen/spacing_7"
-        android:visibility="visible"
-        app:cardCornerRadius="0dp"
+        app:cardCornerRadius="@dimen/spacing_0"
         app:cardElevation="@dimen/spacing_5">
 
         <LinearLayout
@@ -41,7 +42,7 @@
 
                 <View
                     android:layout_width="@dimen/spacing_15"
-                    android:layout_height="0dp" />
+                    android:layout_height="@dimen/spacing_0" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -54,10 +55,9 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/semi"
                         android:gravity="center_vertical"
-                        android:text="@string/placeholder"
-                        android:textSize="@dimen/txt_16"
                         android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                        android:textColor="@color/colorHeaderToolbar" />
+                        android:textColor="@color/colorHeaderToolbar"
+                        android:textSize="@dimen/txt_16" />
 
                     <TextView
                         android:id="@+id/timeline_occupation"
@@ -65,10 +65,9 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/regular"
                         android:gravity="center_vertical"
-                        android:text="@string/placeholder"
-                        android:textSize="@dimen/txt_14"
                         android:textAppearance="@style/TextAppearance.AppCompat.Caption"
-                        android:textColor="@color/grey_80" />
+                        android:textColor="@color/grey_80"
+                        android:textSize="@dimen/txt_14" />
 
                 </LinearLayout>
 
@@ -81,10 +80,9 @@
                 android:layout_margin="@dimen/spacing_15"
                 android:fontFamily="@font/regular"
                 android:lineSpacingExtra="@dimen/spacing_4"
-                android:text="@string/placeholder"
-                android:textSize="@dimen/txt_14"
                 android:textAppearance="@style/TextAppearance.AppCompat.Caption"
-                android:textColor="@color/grey_80" />
+                android:textColor="@color/grey_80"
+                android:textSize="@dimen/txt_14" />
 
             <View
                 android:layout_width="match_parent"
@@ -120,17 +118,16 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/regular"
                         android:gravity="center_vertical"
-                        android:text="@string/placeholder"
-                        android:textSize="@dimen/txt_14"
                         android:singleLine="true"
                         android:textAppearance="@style/TextAppearance.AppCompat.Caption"
-                        android:textColor="@color/grey_80" />
+                        android:textColor="@color/grey_80"
+                        android:textSize="@dimen/txt_14" />
 
                 </LinearLayout>
 
                 <View
                     android:layout_width="@dimen/spacing_15"
-                    android:layout_height="0dp" />
+                    android:layout_height="@dimen/spacing_0" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -153,11 +150,10 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/regular"
                         android:gravity="center_vertical"
-                        android:text="@string/placeholder"
-                        android:textSize="@dimen/txt_14"
                         android:singleLine="true"
                         android:textAppearance="@style/TextAppearance.AppCompat.Caption"
-                        android:textColor="@color/grey_80" />
+                        android:textColor="@color/grey_80"
+                        android:textSize="@dimen/txt_14" />
 
                 </LinearLayout>
 
@@ -170,7 +166,6 @@
                 android:background="@color/grey_10" />
 
             <LinearLayout
-                android:id="@+id/lyt_btn_parent"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/spacing_50"
                 android:gravity="center_vertical"
@@ -196,12 +191,11 @@
                         android:id="@+id/timeline_btn_web_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/placeholder"
                         android:fontFamily="@font/semi"
-                        android:textSize="@dimen/txt_14"
                         android:singleLine="true"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
-                        android:textColor="@color/grey_80" />
+                        android:textColor="@color/grey_80"
+                        android:textSize="@dimen/txt_14" />
 
                 </LinearLayout>
 
@@ -229,12 +223,11 @@
                         android:id="@+id/timeline_btn_certificate_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/placeholder"
                         android:fontFamily="@font/semi"
-                        android:textSize="@dimen/txt_14"
                         android:singleLine="true"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
-                        android:textColor="@color/grey_80" />
+                        android:textColor="@color/grey_80"
+                        android:textSize="@dimen/txt_14" />
 
                 </LinearLayout>
 
@@ -243,5 +236,9 @@
 
         </LinearLayout>
     </android.support.v7.widget.CardView>
+
+    <View
+        android:layout_width="@dimen/spacing_0"
+        android:layout_height="@dimen/spacing_5" />
 
 </LinearLayout>

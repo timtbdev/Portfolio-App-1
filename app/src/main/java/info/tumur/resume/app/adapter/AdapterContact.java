@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.balysv.materialripple.MaterialRippleLayout;
@@ -27,34 +26,14 @@ public class AdapterContact extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
     private OnItemClickListener onItemClickListener;
 
-    public interface OnItemClickListener {
-        void onItemClick(View view, Contact obj);
+    // Provide a suitable constructor
+    public AdapterContact(Context ctx, ArrayList<Contact> items) {
+        this.ctx = ctx;
+        this.items = items;
     }
 
     public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
         this.onItemClickListener = onItemClickListener;
-    }
-
-    public class ViewHolder extends RecyclerView.ViewHolder {
-        // each data item is just a string in this case
-        public TextView btn_text;
-        public TextView btn_des;
-        public ImageView btn_icon;
-        public LinearLayout lyt_color;
-        public MaterialRippleLayout lyt_parent;
-
-        public ViewHolder(View v) {
-            super(v);
-            btn_text = (TextView) v.findViewById(R.id.btn_text);
-            btn_des = (TextView) v.findViewById(R.id.btn_des);
-            btn_icon = (ImageView) v.findViewById(R.id.btn_icon);
-            lyt_parent = (MaterialRippleLayout) v.findViewById(R.id.lyt_parent);
-        }
-    }
-
-    public AdapterContact(Context ctx, ArrayList<Contact> items) {
-        this.ctx = ctx;
-        this.items = items;
     }
 
     @Override
@@ -65,7 +44,7 @@ public class AdapterContact extends RecyclerView.Adapter<RecyclerView.ViewHolder
         return vh;
     }
 
-    // Replace the contents of a view (invoked by the layout manager)
+    // Replace the contents of a view
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         if (holder instanceof ViewHolder) {
@@ -100,6 +79,25 @@ public class AdapterContact extends RecyclerView.Adapter<RecyclerView.ViewHolder
     public void setItems(List<Contact> items) {
         this.items = items;
         notifyDataSetChanged();
+    }
+
+    public interface OnItemClickListener {
+        void onItemClick(View view, Contact obj);
+    }
+
+    public class ViewHolder extends RecyclerView.ViewHolder {
+        public TextView btn_text;
+        public TextView btn_des;
+        public ImageView btn_icon;
+        public MaterialRippleLayout lyt_parent;
+
+        public ViewHolder(View v) {
+            super(v);
+            btn_text = v.findViewById(R.id.btn_text);
+            btn_des = v.findViewById(R.id.btn_des);
+            btn_icon = v.findViewById(R.id.btn_icon);
+            lyt_parent = v.findViewById(R.id.lyt_parent);
+        }
     }
 
 

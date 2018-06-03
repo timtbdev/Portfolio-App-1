@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
-import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.AppCompatDelegate;
@@ -19,8 +18,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.balysv.materialripple.MaterialRippleLayout;
 import com.google.firebase.analytics.FirebaseAnalytics;
@@ -70,8 +69,10 @@ public class ActivityPortfolioDetails extends AppCompatActivity {
     private Call<CallbackPortfolioDetails> callbackCall = null;
     private Toolbar toolbar;
     private ActionBar actionBar;
+    private ProgressBar progressbar;
+    private View lyt_main_content;
+    private View lyt_failed;
     private View parent_view;
-    private SwipeRefreshLayout swipe_refresh;
     private MaterialRippleLayout lyt_btn_url;
     private FirebaseAnalytics mFirebaseAnalytics;
     static ActivityPortfolioDetails activityPortfolioDetails;
@@ -79,19 +80,23 @@ public class ActivityPortfolioDetails extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Obtain the FirebaseAnalytics instance.
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
+
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
         setContentView(R.layout.activity_portfolio_details);
         portfolio_id = (Integer) getIntent().getSerializableExtra(EXTRA_OBJECT_ID);
         portfolio_title = getIntent().getStringExtra(EXTRA_TITLE);
         activityPortfolioDetails = this;
+
         initToolbar();
         initComponent();
         requestAction();
     }
 
     private void initToolbar() {
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
@@ -101,33 +106,28 @@ public class ActivityPortfolioDetails extends AppCompatActivity {
 
     private void initComponent() {
         parent_view = findViewById(android.R.id.content);
-        swipe_refresh = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh_layout);
-        // on swipe
-        swipe_refresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-            @Override
-            public void onRefresh() {
-                requestAction();
-            }
-        });
+        progressbar = parent_view.findViewById(R.id.progressbar);
+        lyt_main_content = parent_view.findViewById(R.id.lyt_main_content);
+        lyt_failed = parent_view.findViewById(R.id.lyt_failed);
     }
 
     private void requestAction() {
-        showFailedView(false, "");
+        //showFailedView(false, "");
         swipeProgress(true);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 requestPortfolioDetailsApi();
             }
-        }, 500);
+        }, 1000);
     }
 
     private void onFailRequest() {
         swipeProgress(false);
         if (NetworkCheck.isConnect(this)) {
-            showFailedView(true, getString(R.string.failed_text));
+            showFailedView(true, getString(R.string.txt_failed));
         } else {
-            showFailedView(true, getString(R.string.no_internet_text));
+            showFailedView(true, getString(R.string.txt_no_internet));
         }
     }
 
@@ -159,13 +159,13 @@ public class ActivityPortfolioDetails extends AppCompatActivity {
         ((TextView) findViewById(R.id.title)).setText(portfolio.title);
         ((TextView) findViewById(R.id.date)).setText(Tools.getFormattedDate(portfolio.date));
         ((TextView) findViewById(R.id.brief)).setText(portfolio.brief);
-        ((TextView) findViewById(R.id.title_features)).setText(this.getResources().getString(R.string.features));
+        ((TextView) findViewById(R.id.title_features)).setText(this.getResources().getString(R.string.txt_features));
         ((TextView) findViewById(R.id.features)).setText(portfolio.features);
-        ((TextView) findViewById(R.id.title_description)).setText(this.getResources().getString(R.string.description));
+        ((TextView) findViewById(R.id.title_description)).setText(this.getResources().getString(R.string.txt_description));
         ((TextView) findViewById(R.id.description)).setText(portfolio.description);
         ((Button) findViewById(R.id.url)).setText(portfolio.btn_title);
 
-        ((Button) findViewById(R.id.url)).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.url).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Tools.directUrl(getInstance(), portfolio.btn_url);
@@ -174,14 +174,11 @@ public class ActivityPortfolioDetails extends AppCompatActivity {
 
         // display Image slider
         displayImageSlider();
-
-        Toast.makeText(this, R.string.msg_data_loaded, Toast.LENGTH_SHORT).show();
-
     }
 
     private void displayImageSlider() {
-        final LinearLayout layout_dots = (LinearLayout) findViewById(R.id.layout_dots);
-        ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
+        final LinearLayout layout_dots = findViewById(R.id.layout_dots);
+        ViewPager viewPager = findViewById(R.id.pager);
         final AdapterPortfolioImage adapterSlider = new AdapterPortfolioImage(this, new ArrayList<PortfolioImage>());
 
         final List<PortfolioImage> productImages = new ArrayList<>();
@@ -248,9 +245,6 @@ public class ActivityPortfolioDetails extends AppCompatActivity {
     }
 
     private void showFailedView(boolean show, String message) {
-        View lyt_failed = (View) findViewById(R.id.lyt_failed);
-        View lyt_main_content = (View) findViewById(R.id.lyt_main_content);
-
         ((TextView) findViewById(R.id.failed_message)).setText(message);
         if (show) {
             lyt_main_content.setVisibility(View.GONE);
@@ -259,7 +253,7 @@ public class ActivityPortfolioDetails extends AppCompatActivity {
             lyt_main_content.setVisibility(View.VISIBLE);
             lyt_failed.setVisibility(View.GONE);
         }
-        ((Button) findViewById(R.id.failed_retry)).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.failed_retry).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 requestAction();
@@ -269,15 +263,13 @@ public class ActivityPortfolioDetails extends AppCompatActivity {
 
     private void swipeProgress(final boolean show) {
         if (!show) {
-            swipe_refresh.setRefreshing(show);
+            progressbar.setVisibility(View.GONE);
+            lyt_main_content.setVisibility(View.VISIBLE);
             return;
+        } else {
+            progressbar.setVisibility(View.VISIBLE);
+            lyt_main_content.setVisibility(View.GONE);
         }
-        swipe_refresh.post(new Runnable() {
-            @Override
-            public void run() {
-                swipe_refresh.setRefreshing(show);
-            }
-        });
     }
 
     @Override

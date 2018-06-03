@@ -1,37 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/lyt_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
     android:gravity="center_vertical"
     android:orientation="vertical">
+
     <View
         android:layout_width="@dimen/spacing_15"
-        android:layout_height="0dp" />
+        android:layout_height="@dimen/spacing_0" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/spacing_10"
         android:layout_marginBottom="@dimen/spacing_2"
+        android:layout_marginLeft="@dimen/spacing_10"
         android:orientation="horizontal">
-    <TextView
-        android:id="@+id/skill_section_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="@string/placeholder"
-        android:fontFamily="@font/semi"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
-        android:textColor="@color/grey_80" />
+
+        <TextView
+            android:id="@+id/skill_section_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/semi"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+            android:textColor="@color/grey_80" />
     </LinearLayout>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/spacing_2"
         android:background="@drawable/dash_line" />
 
     <View
-        android:layout_width="0dp"
+        android:layout_width="@dimen/spacing_0"
         android:layout_height="@dimen/spacing_7" />
 
 </LinearLayout>

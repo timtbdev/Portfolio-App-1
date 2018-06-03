@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -28,15 +26,18 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/grey_10">
+            android:background="@color/grey_10"
+            android:orientation="vertical">
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/recyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/grey_10"
-                android:padding="@dimen/spacing_10"
-                android:nestedScrollingEnabled="false"
+                android:nestedScrollingEnabled="true"
+                android:paddingEnd="@dimen/spacing_10"
+                android:paddingLeft="@dimen/spacing_10"
+                android:paddingRight="@dimen/spacing_10"
+                android:paddingStart="@dimen/spacing_10"
                 android:scrollingCache="true" />
 
 

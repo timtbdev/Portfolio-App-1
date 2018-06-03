@@ -1,46 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group
-        android:id="@+id/grp_1"
-        android:checkableBehavior="none">
+    <group android:checkableBehavior="none">
         <item
             android:id="@+id/nav_experience"
             android:icon="@drawable/ic_experience"
-            android:title="@string/main_menu_experience" />
+            android:title="@string/txt_main_menu_experience" />
         <item
             android:id="@+id/nav_education"
             android:icon="@drawable/ic_education"
-            android:title="@string/main_menu_education" />
+            android:title="@string/txt_main_menu_education" />
         <item
             android:id="@+id/nav_language"
             android:icon="@drawable/ic_language"
-            android:title="@string/main_menu_languages" />
+            android:title="@string/txt_main_menu_languages" />
         <item
             android:id="@+id/nav_portfolio"
             android:icon="@drawable/ic_portfolio"
-            android:title="@string/main_menu_portfolio" />
+            android:title="@string/txt_main_menu_portfolio" />
     </group>
-    <group
-        android:id="@+id/grp_2"
-        android:checkableBehavior="none">
+    <group android:checkableBehavior="none">
         <item
             android:id="@+id/nav_rate"
             android:icon="@drawable/ic_rate"
-            android:title="@string/main_menu_rate" />
+            android:title="@string/txt_main_menu_rate" />
         <item
             android:id="@+id/nav_share"
             android:icon="@drawable/ic_share"
-            android:title="@string/main_menu_share" />
+            android:title="@string/txt_main_menu_share" />
     </group>
 
-    <group
-        android:id="@+id/grp_3"
-        android:checkableBehavior="none">
+    <group android:checkableBehavior="none">
         <item
             android:id="@+id/nav_contact"
             android:icon="@drawable/ic_email"
-            android:title="@string/main_menu_contact" />
+            android:title="@string/txt_main_menu_contact" />
 
     </group>
 

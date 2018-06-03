@@ -43,10 +43,10 @@ public class FragmentSummarySocial extends Fragment {
     }
 
     private void initComponent() {
-        recyclerView= (RecyclerView) root_view.findViewById(R.id.recyclerView);
+        recyclerView = root_view.findViewById(R.id.recyclerView);
         //recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
-       recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), Tools.getGridSpanCount(getActivity())));
-       recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), Tools.getGridSpanCount(getActivity())));
+        recyclerView.setHasFixedSize(true);
 
         //set data and list adapter
         adapterSocial = new AdapterSocial(getActivity(), new ArrayList<Social>());
@@ -62,7 +62,7 @@ public class FragmentSummarySocial extends Fragment {
         });
     }
 
-    private void requestSummarySocialApi () {
+    private void requestSummarySocialApi() {
         API api = RestAdapter.createAPI();
         callbackCallSocial = api.getSummarySocial();
         callbackCallSocial.enqueue(new Callback<CallbackSummarySocial>() {
@@ -91,7 +91,7 @@ public class FragmentSummarySocial extends Fragment {
         if (NetworkCheck.isConnect(getActivity())) {
             showFailedView(R.string.msg_failed_load_data);
         } else {
-            showFailedView(R.string.no_internet_text);
+            showFailedView(R.string.txt_no_internet);
         }
     }
 

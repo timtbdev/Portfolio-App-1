@@ -1,69 +1,40 @@
 <resources>
 
-    <string name="app_name">Resume Alex</string>
-    <string name="name">Tumur Bazarragchaa (Alex)</string>
-    <string name="web">Full Stack Web Developer</string>
-    <string name="android">Android Developer</string>
-    <string name="location">San Francisco Bay Area, CA</string>
-    <string name="summary_introduction">Summary</string>
-    <string name="summary_skills">Technical skills</string>
-    <string name="app_version">Version</string>
-    <string name="version_unknown">Unknown</string>
-    <string name="got_it">GOT IT</string>
-    <string name="ok">OK</string>
-    <string name="cancel">CANCEL</string>
-    <string name="yes">YES</string>
-    <string name="no">NO</string>
-    <string name="close">CLOSE</string>
-    <string name="try_again">TRY AGAIN</string>
-    <string name="failed_text">Failed When Load Data</string>
-    <string name="no_internet_text">No Internet Connection</string>
-    <string name="msg_data_loaded">Data loaded</string>
+    <!--App Name -->
+    <string name="txt_app_name">Resume Alex</string>
+
+    <!--All data for ActivitySplash -->
+    <string name="txt_name">Tumur.B (Alex)</string>
+    <string name="txt_android">Android Developer</string>
+    <string name="txt_location">San Francisco Bay Area, CA</string>
+
+    <!--All data for ActivityMain -->
+    <string name="txt_summary_skills">Technical skills</string>
+    <string name="txt_press_again_exit_app">Press again to exit</string>
+
+    <!--All data for Drawer Menu -->
+    <string name="txt_main_menu_summary">Summary</string>
+    <string name="txt_main_menu_experience">Experience</string>
+    <string name="txt_main_menu_education">Education</string>
+    <string name="txt_main_menu_languages">Languages</string>
+    <string name="txt_main_menu_portfolio">Portfolio</string>
+    <string name="txt_main_menu_rate">Rate</string>
+    <string name="txt_main_menu_share">Share</string>
+    <string name="txt_main_menu_contact">Contact</string>
+    <string name="txt_main_menu_navigation_drawer_open">Open navigation drawer</string>
+    <string name="txt_main_menu_navigation_drawer_close">Close navigation drawer</string>
+
+    <!--All data for Network, Failed and Empty views -->
+    <string name="txt_ok">OK</string>
+    <string name="txt_cancel">CANCEL</string>
+    <string name="txt_close">CLOSE</string>
+    <string name="txt_try_again">TRY AGAIN</string>
+    <string name="txt_failed">Failed When Load Data</string>
     <string name="msg_failed_load_data">Failed when load data</string>
-    <string name="press_again_exit_app">Press again to exit</string>
-    <string name="no_item">No Item</string>
-    <string name="features">Features</string>
-    <string name="description">Description</string>
-
-
-    <!--All data for ActivitySplash.java -->
-    <string name="title_unable_connect">Unable connect to server</string>
-    <string name="msg_unable_connect">Server temporary down or under maintenance</string>
+    <string name="txt_no_internet">No Internet Connection</string>
     <string name="msg_no_internet">Please check your Internet connection and try again</string>
-    <string name="title_info">Information</string>
-    <string name="title_no_internet">No Internet Connection</string>
+    <string name="txt_unable_connect">No Server Connection</string>
+    <string name="msg_unable_connect">Server temporary down or under maintenance</string>
+    <string name="txt_no_item">No Item</string>
 
-    <!--All data for ActivityDialogNotification.java -->
-    <string name="title_notif_details">Notification Details</string>
-    <string name="title_notif">Notification</string>
-
-    <!--All data ActivityFullScreenImage.java -->
-    <string name="image_of">%1$d of %2$d</string>
-
-
-
-    // Menu Header Menu ----------------------------------------------------------------------------
-    <string name="main_menu_summary">Summary</string>
-    <string name="main_menu_experience">Experience</string>
-    <string name="main_menu_experience_brief">Feel free to take a deeper look at what I have accomplished over the years.</string>
-    <string name="main_menu_education">Education</string>
-    <string name="main_menu_education_brief">Find out what I have accomplished over the years.</string>
-    <string name="main_menu_languages">Languages</string>
-    <string name="main_menu_languages_brief">Find out how I have developed my language skills over the years.</string>
-    <string name="main_menu_portfolio">Portfolio</string>
-    <string name="main_menu_portfolio_brief">Find out what I have developed over the years</string>
-    <string name="main_menu_rate">Rate</string>
-    <string name="main_menu_share">Share</string>
-    <string name="main_menu_contact">Contact</string>
-    <string name="main_menu_contact_brief">CFeel free to reach out and start a conversation.</string>
-    <string name="main_menu_navigation_drawer_open">Open navigation drawer</string>
-    <string name="main_menu_navigation_drawer_close">Close navigation drawer</string>
-
-    // PlaceHolder ---------------------------------------------------------------------------------
-    <string name="placeholder">Lorem ipsum</string>
-    <string name="btn_placeholder">Button</string>
-    <string name="long_placeholder">
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
-        Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-    </string>
 </resources>

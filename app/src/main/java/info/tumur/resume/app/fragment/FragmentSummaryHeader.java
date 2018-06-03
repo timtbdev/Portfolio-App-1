@@ -26,9 +26,9 @@ import retrofit2.Response;
 
 public class FragmentSummaryHeader extends Fragment {
 
+    private static final String TAG = "from";
     private View root_view;
     private Call<CallbackSummaryHeader> callbackCallHeader = null;
-    private static final String TAG = "from";
     private String from;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -82,7 +82,7 @@ public class FragmentSummaryHeader extends Fragment {
         if (NetworkCheck.isConnect(getActivity())) {
             showFailedView(R.string.msg_failed_load_data);
         } else {
-            showFailedView(R.string.no_internet_text);
+            showFailedView(R.string.txt_no_internet);
         }
     }
 

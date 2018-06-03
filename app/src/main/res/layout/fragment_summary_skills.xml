@@ -30,7 +30,7 @@
 
                 <View
                     android:layout_width="@dimen/spacing_15"
-                    android:layout_height="0dp" />
+                    android:layout_height="@dimen/spacing_0" />
 
                 <ImageView
                     android:layout_width="@dimen/spacing_40"
@@ -40,16 +40,14 @@
                     app:srcCompat="@drawable/ic_summary_skills" />
 
                 <TextView
-                    android:id="@+id/summary_title"
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/spacing_0"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="@font/semi"
-                    android:text="@string/summary_skills"
+                    android:text="@string/txt_summary_skills"
                     android:textAllCaps="true"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                    android:textColor="@color/colorHeaderText"
-                    android:textStyle="bold" />
+                    android:textColor="@color/colorHeaderText" />
 
             </LinearLayout>
 
@@ -72,7 +70,7 @@
                     android:scrollingCache="true" />
 
                 <View
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/spacing_0"
                     android:layout_height="@dimen/spacing_7" />
 
             </LinearLayout>

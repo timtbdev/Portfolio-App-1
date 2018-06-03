@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -23,58 +22,67 @@
 
         </android.support.design.widget.AppBarLayout>
 
-        <ProgressBar
+        <RelativeLayout
             android:id="@+id/progress_bar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:indeterminateTint="@color/colorHeaderToolbar"
-            android:visibility="gone" />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="gone">
 
-            <RelativeLayout
-                android:id="@+id/lyt_parent"
+            <com.github.ybq.android.spinkit.SpinKitView xmlns:app="http://schemas.android.com/apk/res-auto"
+                style="@style/SpinKitView.Wave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                app:SpinKit_Color="@color/colorHeaderText" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/lyt_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
 
-                <LinearLayout
+                <!--Fragment Header -->
+                <FrameLayout
+                    android:id="@+id/fragment_summary_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <!--Fragment Contact-->
+                <FrameLayout
+                    android:id="@+id/fragment_contact"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:focusableInTouchMode="true"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical">
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/spacing_15"
+                    android:layout_marginLeft="@dimen/spacing_15"
+                    android:layout_marginRight="@dimen/spacing_15"
+                    android:layout_marginStart="@dimen/spacing_15"
+                    android:layout_marginTop="@dimen/spacing_7" />
 
-                    <!--Fragment Header -->
-                    <FrameLayout
-                        android:id="@+id/fragment_summary_header"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+            </LinearLayout>
 
-                    <!--Fragment Contact-->
-                    <FrameLayout
-                        android:id="@+id/fragment_contact"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="@dimen/spacing_15"
-                        android:layout_marginRight="@dimen/spacing_15"
-                        android:layout_marginEnd="@dimen/spacing_15"
-                        android:layout_marginStart="@dimen/spacing_15"
-                        android:layout_marginTop="@dimen/spacing_7" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingBottom="@dimen/spacing_56">
 
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:paddingBottom="@dimen/spacing_56">
-
-                    <include
-                        android:id="@+id/lyt_failed"
-                        layout="@layout/include_failed"
-                        android:visibility="gone" />
-                </LinearLayout>
-            </RelativeLayout>
+                <include
+                    android:id="@+id/lyt_failed"
+                    layout="@layout/include_failed"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </RelativeLayout>
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

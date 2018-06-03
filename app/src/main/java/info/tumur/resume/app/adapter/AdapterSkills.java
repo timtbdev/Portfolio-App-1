@@ -17,36 +17,15 @@ import info.tumur.resume.app.model.Skills;
 
 public class AdapterSkills extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    private Context ctx;
-    private List<Skills> items = new ArrayList<>();
     private final int VIEW_ITEM = 1;
     private final int VIEW_SECTION = 0;
+    private Context ctx;
+    private List<Skills> items = new ArrayList<>();
 
+    // Provide a suitable constructor
     public AdapterSkills(Context ctx, List<Skills> items) {
         this.ctx = ctx;
         this.items = items;
-    }
-
-    public class OriginalViewHolder extends RecyclerView.ViewHolder {
-        // each data item is just a string in this case
-        public TextView skill_name;
-        public TextView skill_description;
-        public LinearLayout lyt_parent;
-
-        public OriginalViewHolder(View v) {
-            super(v);
-            skill_name = (TextView) v.findViewById(R.id.skill_name);
-            skill_description = (TextView) v.findViewById(R.id.skill_description);
-        }
-    }
-
-    public static class SectionViewHolder extends RecyclerView.ViewHolder {
-        public TextView skill_section_name;
-
-        public SectionViewHolder(View v) {
-            super(v);
-            skill_section_name = (TextView) v.findViewById(R.id.skill_section_name);
-        }
     }
 
     @Override
@@ -62,7 +41,7 @@ public class AdapterSkills extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         return vh;
     }
 
-    // Replace the contents of a view (invoked by the layout manager)
+    // Replace the contents of a view
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         Skills s = items.get(position);
@@ -90,6 +69,27 @@ public class AdapterSkills extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     public void setItems(int index, Skills skills) {
         items.add(index, skills);
         notifyDataSetChanged();
+    }
+
+    public static class SectionViewHolder extends RecyclerView.ViewHolder {
+        public TextView skill_section_name;
+
+        public SectionViewHolder(View v) {
+            super(v);
+            skill_section_name = v.findViewById(R.id.skill_section_name);
+        }
+    }
+
+    public class OriginalViewHolder extends RecyclerView.ViewHolder {
+        public TextView skill_name;
+        public TextView skill_description;
+        public LinearLayout lyt_parent;
+
+        public OriginalViewHolder(View v) {
+            super(v);
+            skill_name = v.findViewById(R.id.skill_name);
+            skill_description = v.findViewById(R.id.skill_description);
+        }
     }
 
 

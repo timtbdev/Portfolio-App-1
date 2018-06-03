@@ -41,7 +41,7 @@ public class FragmentSummarySkills extends Fragment {
     }
 
     private void initComponent() {
-        recyclerView= (RecyclerView) root_view.findViewById(R.id.recyclerView);
+        recyclerView = root_view.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setHasFixedSize(true);
 
@@ -49,7 +49,7 @@ public class FragmentSummarySkills extends Fragment {
         //adapterSkills = new AdapterSkills(getActivity(), new ArrayList<Skills>());
     }
 
-    private void requestSummarySkillsApi () {
+    private void requestSummarySkillsApi() {
         API api = RestAdapter.createAPI();
         callbackCallSkills = api.getSummarySkills();
         callbackCallSkills.enqueue(new Callback<CallbackSummarySkills>() {
@@ -62,7 +62,7 @@ public class FragmentSummarySkills extends Fragment {
                     String temp_category = "test";
                     for (int i = 0; i < items.size(); i++) {
                         if (!temp_category.equals(items.get(i).skill_category.toString())) {
-                            items.add(i, new Skills(items.get(i).skill_category,true));
+                            items.add(i, new Skills(items.get(i).skill_category, true));
                             temp_category = items.get(i).skill_category.toString();
                         }
                     }
@@ -90,7 +90,7 @@ public class FragmentSummarySkills extends Fragment {
         if (NetworkCheck.isConnect(getActivity())) {
             showFailedView(R.string.msg_failed_load_data);
         } else {
-            showFailedView(R.string.no_internet_text);
+            showFailedView(R.string.txt_no_internet);
         }
     }
 

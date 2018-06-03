@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.StringRes;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
@@ -53,9 +52,12 @@ public class ActivityMain extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         // Obtain the FirebaseAnalytics instance.
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
+
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
+
         setContentView(R.layout.activity_main);
         activityMain = this;
         initComponent();
@@ -66,18 +68,18 @@ public class ActivityMain extends AppCompatActivity {
     }
 
     private void initToolbar() {
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setHomeButtonEnabled(true);
-        actionBar.setTitle(R.string.main_menu_summary);
+        actionBar.setTitle(R.string.txt_main_menu_summary);
     }
 
     private void initDrawerMenu() {
         nav_view = findViewById(R.id.main_nav_view);
         final DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.main_menu_navigation_drawer_open, R.string.main_menu_navigation_drawer_close) {
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.txt_main_menu_navigation_drawer_open, R.string.txt_main_menu_navigation_drawer_close) {
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
             }
@@ -89,7 +91,6 @@ public class ActivityMain extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
                 onItemSelected(item.getItemId());
-                //drawer.closeDrawers();
                 return true;
             }
         });
@@ -99,15 +100,15 @@ public class ActivityMain extends AppCompatActivity {
     public boolean onItemSelected(int id) {
         Intent i;
         switch (id) {
-            //sub menu
+            //Drawer menus
             case R.id.nav_experience:
-                ActivityTimeline.navigate(this, 1, getResources().getString(R.string.main_menu_experience));
+                ActivityTimeline.navigate(this, 1, getResources().getString(R.string.txt_main_menu_experience));
                 break;
             case R.id.nav_education:
-                ActivityTimeline.navigate(this, 2, getResources().getString(R.string.main_menu_education));
+                ActivityTimeline.navigate(this, 2, getResources().getString(R.string.txt_main_menu_education));
                 break;
             case R.id.nav_language:
-                ActivityTimeline.navigate(this, 3, getResources().getString(R.string.main_menu_languages));
+                ActivityTimeline.navigate(this, 3, getResources().getString(R.string.txt_main_menu_languages));
                 break;
             case R.id.nav_portfolio:
                 ActivityPortfolio.navigate(this);
@@ -124,7 +125,7 @@ public class ActivityMain extends AppCompatActivity {
             default:
                 break;
         }
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawers();
         return true;
     }
@@ -185,7 +186,7 @@ public class ActivityMain extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (!drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.openDrawer(GravityCompat.START);
         } else {
@@ -196,7 +197,7 @@ public class ActivityMain extends AppCompatActivity {
     private long exitTime = 0;
     public void doExitApp() {
         if ((System.currentTimeMillis() - exitTime) > 2000) {
-            Toast.makeText(this, R.string.press_again_exit_app, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.txt_press_again_exit_app, Toast.LENGTH_SHORT).show();
             exitTime = System.currentTimeMillis();
         } else {
             finish();
@@ -206,14 +207,13 @@ public class ActivityMain extends AppCompatActivity {
     public void showDataLoaded() {
         if (s_header && s_social && s_introduction && s_skills) {
             hideProgressBar();
-            Snackbar.make(parent_view, R.string.msg_data_loaded, Snackbar.LENGTH_SHORT).show();
         }
     }
 
     public void showDialogFailed(@StringRes int msg) {
         if (dialog_failed != null && dialog_failed.isShowing()) return;
         hideProgressBar();
-        dialog_failed = new DialogUtils(this).buildDialogWarning(-1, msg, R.string.try_again, R.drawable.img_no_connect, new CallbackDialog() {
+        dialog_failed = new DialogUtils(this).buildDialogWarning(-1, msg, R.string.txt_try_again, R.drawable.img_no_connect, new CallbackDialog() {
             @Override
             public void onPositiveClick(Dialog dialog) {
                 dialog.dismiss();

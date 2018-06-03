@@ -26,42 +26,45 @@
         android:background="@color/grey_80"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/grey_10"
-                android:focusableInTouchMode="true"
-                android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/grey_10"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/recyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/grey_10"
-                android:padding="@dimen/spacing_10"
-                android:nestedScrollingEnabled="false"
+                android:nestedScrollingEnabled="true"
+                android:paddingEnd="@dimen/spacing_10"
+                android:paddingLeft="@dimen/spacing_10"
+                android:paddingRight="@dimen/spacing_10"
+                android:paddingStart="@dimen/spacing_10"
                 android:scrollingCache="true" />
 
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:paddingBottom="@dimen/spacing_150"
-                    android:visibility="visible">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingBottom="@dimen/spacing_150"
+                android:visibility="visible">
 
-                    <include
-                        android:id="@+id/lyt_no_item"
-                        layout="@layout/include_no_item"
-                        android:visibility="gone" />
+                <include
+                    android:id="@+id/lyt_no_item"
+                    layout="@layout/include_no_item"
+                    android:visibility="gone" />
 
-                    <include
-                        android:id="@+id/lyt_failed"
-                        layout="@layout/include_failed"
-                        android:visibility="gone" />
-
-                </RelativeLayout>
+                <include
+                    android:id="@+id/lyt_failed"
+                    layout="@layout/include_failed"
+                    android:visibility="gone" />
 
             </RelativeLayout>
+
+        </RelativeLayout>
 
     </android.support.v4.widget.SwipeRefreshLayout>
 

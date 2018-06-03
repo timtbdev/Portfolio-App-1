@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.DrawerLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawer_layout"
@@ -25,93 +24,95 @@
 
         </android.support.design.widget.AppBarLayout>
 
-        <ProgressBar
+        <com.github.ybq.android.spinkit.SpinKitView xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/progress_bar"
+            style="@style/SpinKitView.Wave"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:indeterminateTint="@color/colorHeaderToolbar"
-            android:visibility="gone"/>
+            android:visibility="gone"
+            app:SpinKit_Color="@color/colorHeaderText" />
 
-            <android.support.v4.widget.NestedScrollView
-                android:id="@+id/nested_content"
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/nested_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/grey_10"
+            android:clipToPadding="false"
+            android:scrollbars="none"
+            android:scrollingCache="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/grey_10"
-                android:clipToPadding="false"
-                android:scrollbars="none"
-                android:scrollingCache="true"
-                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+                android:layout_height="wrap_content">
 
-                <RelativeLayout
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="@color/grey_10"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
 
-                    <LinearLayout
+                    <!--Fragment Header -->
+                    <FrameLayout
+                        android:id="@+id/fragment_summary_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <!--Fragment Social-->
+                    <FrameLayout
+                        android:id="@+id/fragment_summary_social"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@color/grey_10"
-                        android:focusableInTouchMode="true"
-                        android:gravity="center_horizontal"
-                        android:orientation="vertical">
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/spacing_15"
+                        android:layout_marginLeft="@dimen/spacing_15"
+                        android:layout_marginRight="@dimen/spacing_15"
+                        android:layout_marginStart="@dimen/spacing_15"
+                        android:layout_marginTop="@dimen/spacing_7" />
 
-                        <!--Fragment Header -->
-                        <FrameLayout
-                            android:id="@+id/fragment_summary_header"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
-
-                        <!--Fragment Social-->
-                        <FrameLayout
-                            android:id="@+id/fragment_summary_social"
-                            android:layout_gravity="center"
-                            android:layout_marginRight="@dimen/spacing_15"
-                            android:layout_marginLeft="@dimen/spacing_15"
-                            android:layout_marginEnd="@dimen/spacing_15"
-                            android:layout_marginStart="@dimen/spacing_15"
-                            android:layout_marginTop="@dimen/spacing_7"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
-
-                        <!--Fragment Social-->
-                        <FrameLayout
-                            android:id="@+id/fragment_summary_introduction"
-                            android:layout_gravity="center"
-                            android:layout_marginRight="@dimen/spacing_15"
-                            android:layout_marginEnd="@dimen/spacing_15"
-                            android:layout_marginStart="@dimen/spacing_15"
-                            android:layout_marginLeft="@dimen/spacing_15"
-                            android:layout_marginTop="@dimen/spacing_7"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
-
-                        <!--Fragment Skills-->
-                        <FrameLayout
-                            android:id="@+id/fragment_summary_skills"
-                            android:layout_gravity="center"
-                            android:layout_marginRight="@dimen/spacing_15"
-                            android:layout_marginLeft="@dimen/spacing_15"
-                            android:layout_marginEnd="@dimen/spacing_15"
-                            android:layout_marginStart="@dimen/spacing_15"
-                            android:layout_marginTop="@dimen/spacing_7"
-                            android:layout_marginBottom="@dimen/spacing_15"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
+                    <!--Fragment Social-->
+                    <FrameLayout
+                        android:id="@+id/fragment_summary_introduction"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:paddingBottom="@dimen/spacing_56">
-                        <include
-                            android:id="@+id/lyt_failed"
-                            layout="@layout/include_failed"
-                            android:visibility="gone" />
-                    </LinearLayout>
-                </RelativeLayout>
-            </android.support.v4.widget.NestedScrollView>
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/spacing_15"
+                        android:layout_marginLeft="@dimen/spacing_15"
+                        android:layout_marginRight="@dimen/spacing_15"
+                        android:layout_marginStart="@dimen/spacing_15"
+                        android:layout_marginTop="@dimen/spacing_7" />
+
+                    <!--Fragment Skills-->
+                    <FrameLayout
+                        android:id="@+id/fragment_summary_skills"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/spacing_15"
+                        android:layout_marginEnd="@dimen/spacing_15"
+                        android:layout_marginLeft="@dimen/spacing_15"
+                        android:layout_marginRight="@dimen/spacing_15"
+                        android:layout_marginStart="@dimen/spacing_15"
+                        android:layout_marginTop="@dimen/spacing_7" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:paddingBottom="@dimen/spacing_56">
+
+                    <include
+                        android:id="@+id/lyt_failed"
+                        layout="@layout/include_failed"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </RelativeLayout>
+        </android.support.v4.widget.NestedScrollView>
 
     </android.support.design.widget.CoordinatorLayout>
 
@@ -124,8 +125,8 @@
         android:fitsSystemWindows="false"
         app:headerLayout="@layout/include_drawer_header"
         app:itemIconTint="@color/colorHeaderText"
-        app:itemTextColor="@color/colorHeaderText"
         app:itemTextAppearance="@style/NavigationText"
+        app:itemTextColor="@color/colorHeaderText"
         app:menu="@menu/main_menu_navigation" />
 
 </android.support.v4.widget.DrawerLayout>

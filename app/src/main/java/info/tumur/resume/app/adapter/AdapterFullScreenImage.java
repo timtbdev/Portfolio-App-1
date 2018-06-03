@@ -3,7 +3,6 @@ package info.tumur.resume.app.adapter;
 import android.app.Activity;
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,7 +20,7 @@ public class AdapterFullScreenImage extends PagerAdapter {
     private List<String> imagePaths;
     private LayoutInflater inflater;
 
-    // constructor
+    // Provide a suitable constructor
     public AdapterFullScreenImage(Activity activity, List<String> imagePaths) {
         this.act = activity;
         this.imagePaths = imagePaths;
@@ -34,7 +33,7 @@ public class AdapterFullScreenImage extends PagerAdapter {
 
     @Override
     public boolean isViewFromObject(View view, Object object) {
-        return view == ((RelativeLayout) object);
+        return view == object;
     }
 
     @Override
@@ -43,16 +42,16 @@ public class AdapterFullScreenImage extends PagerAdapter {
         inflater = (LayoutInflater) act.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View viewLayout = inflater.inflate(R.layout.item_fullscreen_image, container, false);
 
-        imgDisplay = (TouchImageView) viewLayout.findViewById(R.id.imgDisplay);
+        imgDisplay = viewLayout.findViewById(R.id.imgDisplay);
         Tools.displayImageOriginal(act, imgDisplay, imagePaths.get(position));
-        ((ViewPager) container).addView(viewLayout);
+        container.addView(viewLayout);
 
         return viewLayout;
     }
 
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
-        ((ViewPager) container).removeView((RelativeLayout) object);
+        container.removeView((RelativeLayout) object);
 
     }
 

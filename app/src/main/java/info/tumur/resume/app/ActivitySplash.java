@@ -25,12 +25,16 @@ import retrofit2.Response;
 
 public class ActivitySplash extends AppCompatActivity {
 
-    private boolean on_permission_result = false;
+    // Loading duration
+    private final static int LOADING_DURATION = 1000;
     private FirebaseAnalytics mFirebaseAnalytics;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Obtain the FirebaseAnalytics instance.
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
+
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
         setContentView(R.layout.activity_splash);
 
@@ -43,27 +47,30 @@ public class ActivitySplash extends AppCompatActivity {
     }
 
     private void startProcess() {
+        // Checking internet connection
         if (!NetworkCheck.isConnect(this)) {
             dialogNoInternet();
         } else {
+            // Checking server connection
             requestInfo();
             startActivityMainDelay();
         }
     }
 
+    // Delay for SplashScreen
     private void startActivityMainDelay() {
-        // Show splash screen for 2 seconds
         TimerTask task = new TimerTask() {
             @Override
             public void run() {
                 Intent i = new Intent(ActivitySplash.this, ActivityMain.class);
                 startActivity(i);
-                finish(); // kill current activity
+                finish();
             }
         };
-        new Timer().schedule(task, 4000);
+        new Timer().schedule(task, LOADING_DURATION);
     }
 
+    // Request for API connection check
     private void requestInfo() {
         API api = RestAdapter.createAPI();
         Call<CallbackCheck> callbackCall = api.getCheck();
@@ -72,8 +79,10 @@ public class ActivitySplash extends AppCompatActivity {
             public void onResponse(Call<CallbackCheck> call, Response<CallbackCheck> response) {
                 CallbackCheck resp = response.body();
                 if (resp != null && resp.status.equals("success")) {
+                    // Start next activity
                     startActivityMainDelay();
                 } else {
+                    // No server connection
                     dialogServerNotConnect();
                 }
             }
@@ -86,8 +95,9 @@ public class ActivitySplash extends AppCompatActivity {
         });
     }
 
+    // Dialog for no server connection
     public void dialogServerNotConnect() {
-        Dialog dialog = new DialogUtils(this).buildDialogWarning(R.string.title_unable_connect, R.string.msg_unable_connect, R.string.try_again, R.string.close, R.drawable.img_no_connect, new CallbackDialog() {
+        Dialog dialog = new DialogUtils(this).buildDialogWarning(R.string.txt_unable_connect, R.string.msg_unable_connect, R.string.txt_try_again, R.string.txt_close, R.drawable.img_no_connect, new CallbackDialog() {
             @Override
             public void onPositiveClick(Dialog dialog) {
                 dialog.dismiss();
@@ -103,8 +113,9 @@ public class ActivitySplash extends AppCompatActivity {
     }
 
 
+    // Dialog for no internet connection
     public void dialogNoInternet() {
-        Dialog dialog = new DialogUtils(this).buildDialogWarning(R.string.title_no_internet, R.string.msg_no_internet, R.string.try_again, R.string.close, R.drawable.img_no_internet, new CallbackDialog() {
+        Dialog dialog = new DialogUtils(this).buildDialogWarning(R.string.txt_no_internet, R.string.msg_no_internet, R.string.txt_try_again, R.string.txt_close, R.drawable.img_no_internet, new CallbackDialog() {
             @Override
             public void onPositiveClick(Dialog dialog) {
                 dialog.dismiss();
@@ -119,13 +130,13 @@ public class ActivitySplash extends AppCompatActivity {
         dialog.show();
     }
 
-    // make a delay to start next activity
+    // Delay for next retry
     private void retryOpenApplication() {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 startProcess();
             }
-        }, 2000);
+        }, LOADING_DURATION);
     }
 }

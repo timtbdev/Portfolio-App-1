@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/lyt_parent"
     android:layout_width="match_parent"
@@ -12,81 +11,78 @@
         android:layout_width="@dimen/spacing_0"
         android:layout_height="@dimen/spacing_5" />
 
-        <android.support.v7.widget.CardView
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_5"
+        android:layout_marginRight="@dimen/spacing_5"
+        app:cardCornerRadius="@dimen/spacing_5"
+        app:cardElevation="@dimen/spacing_3">
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/spacing_5"
-            android:layout_marginRight="@dimen/spacing_5"
-            app:cardCornerRadius="@dimen/spacing_5"
-            app:cardElevation="@dimen/spacing_3">
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_180"
+                android:background="@color/colorPortfolioItem" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/spacing_15"
+                android:paddingLeft="@dimen/spacing_15"
+                android:paddingRight="@dimen/spacing_15"
+                android:paddingTop="@dimen/spacing_5">
 
-                <ImageView
-                    android:id="@+id/image"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/spacing_180"
-                    app:srcCompat="@drawable/placeholder"
-                    android:background="@color/colorPortfolioItem" />
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/semi"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorHeaderToolbar" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@android:color/white"
-                    android:orientation="vertical"
-                    android:paddingBottom="@dimen/spacing_15"
-                    android:paddingLeft="@dimen/spacing_15"
-                    android:paddingRight="@dimen/spacing_15"
-                    android:paddingTop="@dimen/spacing_5">
+                    android:layout_marginTop="@dimen/spacing_5"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:id="@+id/category"
+                        android:layout_width="@dimen/spacing_15"
+                        android:layout_height="@dimen/spacing_15"
+                        android:layout_marginEnd="@dimen/spacing_5"
+                        android:layout_marginRight="@dimen/spacing_5"
+                        android:tint="@color/grey_80"
+                        app:srcCompat="@drawable/loading_placeholder" />
 
                     <TextView
-                        android:id="@+id/title"
+                        android:id="@+id/brief"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/semi"
-                        android:maxLines="1"
+                        android:fontFamily="@font/regular"
                         android:singleLine="true"
-                        android:text="@string/placeholder"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                        android:textColor="@color/colorHeaderToolbar" />
+                        android:textAllCaps="true"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/grey_80" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/spacing_5"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
-
-
-                        <ImageView
-                            android:id="@+id/category"
-                            android:layout_width="@dimen/spacing_15"
-                            android:layout_height="@dimen/spacing_15"
-                            android:layout_marginEnd="@dimen/spacing_5"
-                            android:layout_marginRight="@dimen/spacing_5"
-                            android:tint="@color/grey_80"
-                            app:srcCompat="@drawable/placeholder" />
-
-                        <TextView
-                            android:id="@+id/brief"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/regular"
-                            android:text="@string/placeholder"
-                            android:singleLine="true"
-                            android:textAllCaps="true"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                            android:textColor="@color/grey_80" />
-
-                    </LinearLayout>
                 </LinearLayout>
-
             </LinearLayout>
 
-        </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
 
     <View
         android:layout_width="@dimen/spacing_0"

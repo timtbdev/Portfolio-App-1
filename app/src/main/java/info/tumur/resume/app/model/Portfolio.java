@@ -10,8 +10,6 @@ public class Portfolio {
     public String description;
     public String image_bg;
     public String features;
-    public String btn_title;
-    public String btn_url;
 
     public Portfolio() {
     }
