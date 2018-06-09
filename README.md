@@ -1,7 +1,7 @@
 Personal Resume Android App
 -----------------------
 
-[![Build Status](https://travis-ci.org/kioko/pod-adddict.svg?branch=master)](https://travis-ci.org/kioko/pod-adddict)
+[![Build Status](https://api.travis-ci.org/Personal-Resume-Android/pod-adddict.svg?branch=master](https://tumur.info)
 
 Personal Resume Android is an open-source and native Android applicaton which is mobile version of [My Personal Website](http://tumur.info), and it fetches personal information from [Web Service RestAPI](https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/) | Available on Github.
 
@@ -13,14 +13,13 @@ This project was developed for the Android SDK Development of my independent stu
   <img src="https://raw.githubusercontent.com/tumurb/Personal-Resume-Android/master/SCREENSHOTS/screenshot1.png" alt="Personal Resume App Screenshot"/>
 </p>
 
+## Custom Design
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/tumurb/Personal-Resume-Android/master/SCREENSHOTS/screenshot6.jpg" alt="Personal Resume App Screenshot"/>
 </p>
 
-## Promotion video
-
-
-## Documentation
+## Source Code
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/tumurb/Personal-Resume-Android/master/SCREENSHOTS/screenshot7.jpg" alt="Personal Resume App Screenshot"/>
@@ -46,23 +45,24 @@ This project was developed for the Android SDK Development of my independent stu
 ## Download APK
 You can download the apk from: 
 
-1. [Google Playstore](https://play.google.com/store/apps/details?id=com.thomaskioko.podadddict.app)
-2. [Github Release](https://github.com/kioko/pod-adddict/releases/download/v1.0.0/Pod-Adddict-v1.0.apk)
+1. [Google Playstore](https://play.google.com/store/apps/details?id=info.tumur.resume.app)
+2. [Github Release](https://github.com/tumurb/Personal-Resume-Android/blob/master/app/release/app-release.apk)
 
 
 ## Requirements
 * JDK Version 1.7 & above
 * [Android SDK.](http://developer.android.com/sdk/index.html)
 * Android SDK Tools
-* Android SDK Build tools 23.0.2
+* Android SDK Build tools 27
 * Android Support Repository
 * Android Support library
 
 ## Google Play Services Setup.
-This project uses Firebase and Google Analytics. You will need to generate the configuration file (`google-services.json`) and copy it to your `/app` dir. See links below
+This project uses Firebases Analytics and Crashlytics. You will need to generate the configuration file (`google-services.json`) and copy it to your `/app` dir. See links below
 
 1. [Setup Firebase setup](https://firebase.google.com/docs/android/setup)
-2. [Setup Google Analytics](https://developers.google.com/analytics/devguides/collection/android/v4/)
+2. [Setup Firebase Analytics](https://firebase.google.com/docs/analytics/android/start/)
+3. [Setup Firebase Crashlytics](https://firebase.google.com/docs/crashlytics/get-started/)
 
 
 ## Project Setup
@@ -82,26 +82,23 @@ Contributing
 
 #### Would you like to contribute code?
 
-1. [Fork PodAdddict](https://github.com/kioko/pod-adddict).
+1. [Fork Personal-Resume-Android](https://github.com/tumurb/Personal-Resume-Android).
 2. Create a new branch ([using GitHub](https://help.github.com/articles/creating-and-deleting-branches-within-your-repository/)) or the command `git checkout -b branch-name dev`).
-3. [Start a pull request](https://github.com/kioko/pod-adddict/compare). Reference [existing issues](https://github.com/kioko/pod-adddict/issues) when possible.
+3. [Start a pull request](https://github.com/tumurb/Personal-Resume-Android/compare). Reference [existing issues](https://github.com/tumurb/Personal-Resume-Android/issues) when possible.
 
 #### No code!
-* You can [discuss a bug](https://github.com/kioko/pod-adddict/issues) or if it was not reported yet [submit a bug](https://github.com/kioko/pod-adddict/issues/new).
+* You can [discuss a bug](https://github.com/tumurb/Personal-Resume-Android/issues) or if it was not reported yet [submit a bug](https://github.com/tumurb/Personal-Resume-Android/issues/new).
 
 
 Libraries Used
 ============
 
 1. [Retrofit](http://square.github.io/retrofit/)
-2. [ButterKnife](http://jakewharton.github.io/butterknife/)
+2. [OkHttp](https://github.com/square/okhttp)
 3. [Glide](https://github.com/bumptech/glide)
-4. [Stetho](https://github.com/facebook/stetho)
-5. [TriangleLabelView](https://github.com/shts/TriangleLabelView)
-6. [CircleImageView](https://github.com/hdodenhof/CircleImageView)
-7. [Recycler Gesture](https://github.com/netcosports/RecyclerGesture)
-8. [AVLoadingIndicatorView](https://github.com/81813780/AVLoadingIndicatorView)
-9. [Sublime Navigationview Library](https://github.com/vikramkakkar/SublimeNavigationView)
+4. [Android SpinKit](https://github.com/ybq/Android-SpinKit)
+5. [Material Ripple](https://github.com/balysv/material-ripple)
+6. [CircularImageView](https://github.com/lopspower/CircularImageView)
 
 License
 -------
