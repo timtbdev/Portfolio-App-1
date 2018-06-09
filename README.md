@@ -10,30 +10,24 @@ This project was developed as the independent studies for Android Development.
 ## Screenshots
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/tumurb/Personal-Resume-Android/master/SCREENSHOTS/github-01.png" alt="Personal Resume App Screenshot"/>
+  <img src="https://raw.githubusercontent.com/tumurb/Personal-Resume-Android/master/SCREENSHOTS/screenshot1.png" alt="Personal Resume App Screenshot"/>
 </p>
 
-<table>
-  <tr >
-    <td><img src="https://raw.githubusercontent.com/tumurb/Personal-Resume-Android/master/SCREENSHOTS/github-02.png" width="300"/></td>
-    <td align="right"><img src="https://raw.githubusercontent.com/tumurb/Personal-Resume-Android/master/SCREENSHOTS/github-03.png" width="300"/></td>
-  </tr>
-   <tr >
-      <td><img src="https://raw.githubusercontent.com/tumurb/Personal-Resume-Android/master/SCREENSHOTS/github-04.png" width="300"/></td>
-      <td align="right"><img src="https://raw.githubusercontent.com/tumurb/Personal-Resume-Android/master/SCREENSHOTS/github-05.png" width="300"/></td>
-    </tr>
-    <tr >
-     <td><img src="https://raw.githubusercontent.com/tumurb/Personal-Resume-Android/master/SCREENSHOTS/github-06.png" width="300"/></td>
-     <td><img src="https://raw.githubusercontent.com/tumurb/Personal-Resume-Android/master/SCREENSHOTS/github-07.png" width="300"/></td>
-     </tr>
-      <tr >
-       <td><img src="https://raw.githubusercontent.com/tumurb/Personal-Resume-Android/master/SCREENSHOTS/github-08.png" width="300"/></td>
-        <td align="right"><img src="https://raw.githubusercontent.com/tumurb/Personal-Resume-Android/master/SCREENSHOTS/github-09.png" width="300"/></td>
-         </tr>
-  <tr>
-    <td colspan="2"><img src="https://github.com/kioko/pod-adddict/blob/develop/art/widget.png" width="300"/></td>
-  </tr>
-</table>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/tumurb/Personal-Resume-Android/master/SCREENSHOTS/screenshot2.png" alt="Personal Resume App Screenshot"/>
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/tumurb/Personal-Resume-Android/master/SCREENSHOTS/screenshot3.png" alt="Personal Resume App Screenshot"/>
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/tumurb/Personal-Resume-Android/master/SCREENSHOTS/screenshot4.png" alt="Personal Resume App Screenshot"/>
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/tumurb/Personal-Resume-Android/master/SCREENSHOTS/screenshot5.png" alt="Personal Resume App Screenshot"/>
+</p>
 
 ## Download APK
 You can download the apk from: 
