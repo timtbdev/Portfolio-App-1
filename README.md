@@ -1,13 +1,13 @@
-Resume App
+Personal Resume Android App
 -----------------------
 
 [![Build Status](https://travis-ci.org/kioko/pod-adddict.svg?branch=master)](https://travis-ci.org/kioko/pod-adddict)
 
-PodAdddict is an open-source Android Podcast manager that fetches Podcast info from [iTunes Affiliate Resources API](https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/)
+Personal Resume Android is an open-source Android Resume and Portfolio app that fetches personal data from [Web Service RestAPI](https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/)
 
-This project was developed as the final Capstone Project for [Udacity Android Developer Nanodegree Program.](https://www.udacity.com/course/android-developer-nanodegree-by-google--nd801)
+This project was developed as the independent studies for Android Development.
 
-##Screenshots
+## Screenshots
 
 <p align="center">
   <img src="https://github.com/kioko/pod-adddict/blob/master/art/Pod-Addict-Collection.png" alt="Pod-Adddict"/>
@@ -98,7 +98,7 @@ Libraries Used
 License
 -------
 
-    Copyright 2016 Tumur.B Alex
+    Copyright 2018 Tumur.B (Alex)
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
