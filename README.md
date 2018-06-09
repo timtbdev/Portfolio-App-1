@@ -22,6 +22,10 @@ This project was developed for the Android SDK Development of my independent stu
 
 ## Documentation
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/tumurb/Personal-Resume-Android/master/SCREENSHOTS/screenshot7.jpg" alt="Personal Resume App Screenshot"/>
+</p>
+
 ## Screenshots
 <p align="center">
   <img src="https://raw.githubusercontent.com/tumurb/Personal-Resume-Android/master/SCREENSHOTS/screenshot2.png" alt="Personal Resume App Screenshot"/>
