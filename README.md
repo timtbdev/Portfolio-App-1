@@ -10,25 +10,25 @@ This project was developed as the independent studies for Android Development.
 ## Screenshots
 
 <p align="center">
-  <img src="https://github.com/kioko/pod-adddict/blob/master/art/Pod-Addict-Collection.png" alt="Pod-Adddict"/>
+  <img src="https://raw.githubusercontent.com/tumurb/Personal-Resume-Android/master/SCREENSHOTS/github-01.png" alt="Personal Resume App Screenshot"/>
 </p>
 
 <table>
   <tr >
-    <td><img src="https://github.com/kioko/pod-adddict/blob/develop/art/Discover-Poscast.png" width="300"/></td>
-    <td align="right"><img src="https://github.com/kioko/pod-adddict/blob/develop/art/Podcast-Detail.png" width="300"/></td>
+    <td><img src="https://raw.githubusercontent.com/tumurb/Personal-Resume-Android/master/SCREENSHOTS/github-02.png" width="300"/></td>
+    <td align="right"><img src="https://raw.githubusercontent.com/tumurb/Personal-Resume-Android/master/SCREENSHOTS/github-03.png" width="300"/></td>
   </tr>
    <tr >
-      <td><img src="https://github.com/kioko/pod-adddict/blob/develop/art/Subscribed-Feeds.png" width="300"/></td>
-      <td align="right"><img src="https://github.com/kioko/pod-adddict/blob/develop/art/PodCast-Episodes.png" width="300"/></td>
+      <td><img src="https://raw.githubusercontent.com/tumurb/Personal-Resume-Android/master/SCREENSHOTS/github-04.png" width="300"/></td>
+      <td align="right"><img src="https://raw.githubusercontent.com/tumurb/Personal-Resume-Android/master/SCREENSHOTS/github-05.png" width="300"/></td>
     </tr>
     <tr >
-     <td><img src="https://github.com/kioko/pod-adddict/blob/master/art/Podcast-Full-Player.png" width="300"/></td>
-     <td><img src="https://github.com/kioko/pod-adddict/blob/develop/art/Podcast-Player.png" width="300"/></td>
+     <td><img src="https://raw.githubusercontent.com/tumurb/Personal-Resume-Android/master/SCREENSHOTS/github-06.png" width="300"/></td>
+     <td><img src="https://raw.githubusercontent.com/tumurb/Personal-Resume-Android/master/SCREENSHOTS/github-07.png" width="300"/></td>
      </tr>
       <tr >
-       <td><img src="https://github.com/kioko/pod-adddict/blob/develop/art/Expanded-Notificaiton.png" width="300"/></td>
-        <td align="right"><img src="https://github.com/kioko/pod-adddict/blob/develop/art/Collapsed-Notification.png" width="300"/></td>
+       <td><img src="https://raw.githubusercontent.com/tumurb/Personal-Resume-Android/master/SCREENSHOTS/github-08.png" width="300"/></td>
+        <td align="right"><img src="https://raw.githubusercontent.com/tumurb/Personal-Resume-Android/master/SCREENSHOTS/github-09.png" width="300"/></td>
          </tr>
   <tr>
     <td colspan="2"><img src="https://github.com/kioko/pod-adddict/blob/develop/art/widget.png" width="300"/></td>
