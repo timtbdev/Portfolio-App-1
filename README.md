@@ -1,5 +1,6 @@
 Personal Resume Android App
 -----------------------
+[![Build Status](https://travis-ci.org/kioko/pod-adddict.svg?branch=master)](https://travis-ci.org/kioko/pod-adddict)
 
 Personal Resume Android is an open-source and native Android applicaton which is mobile version of [My Personal Website](http://tumur.info), and it fetches personal information from [Web Service RestAPI](https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/) | Available on Github.
 
