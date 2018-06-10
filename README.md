@@ -45,7 +45,7 @@ This project was developed for the Android SDK Development of my independent stu
 You can download the apk from: 
 
 1. [Google Playstore](https://play.google.com/store/apps/details?id=info.tumur.resume.app)
-2. [Github Release](https://github.com/tumurb/Personal-Resume-Android/blob/master/app/release/app-release.apk)
+2. [Github Release](https://github.com/tumurb/Personal-Resume-Android/blob/master/app/release/Resume%201.2.apk)
 
 
 ## Requirements
