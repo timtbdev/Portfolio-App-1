@@ -2,74 +2,86 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/spacing_3">
 
+    <!-- Start of Social Button View -->
     <android.support.v7.widget.CardView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/spacing_2"
-        android:layout_marginLeft="@dimen/spacing_2"
-        android:layout_marginRight="@dimen/spacing_2"
-        android:layout_marginTop="@dimen/spacing_2"
         app:cardCornerRadius="@dimen/spacing_2"
         app:cardElevation="@dimen/spacing_2">
 
+
+        <!-- Start of Ripple Layout Effect -->
         <com.balysv.materialripple.MaterialRippleLayout
             android:id="@+id/lyt_parent"
             style="@style/RippleStyleBlack"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:padding="@dimen/spacing_15">
 
+            <!-- Start of Button Text and Icon View -->
             <LinearLayout
                 android:layout_width="@dimen/spacing_190"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="@dimen/spacing_15">
+                android:orientation="horizontal">
 
-                <RelativeLayout
-                    android:layout_width="@dimen/spacing_40"
-                    android:layout_height="@dimen/spacing_40">
+                // Button Icon
 
-                    <ImageView
-                        android:id="@+id/btn_icon"
-                        android:layout_width="@dimen/spacing_35"
-                        android:layout_height="@dimen/spacing_35"
-                        android:layout_centerInParent="true" />
+                <ImageView
+                    android:id="@+id/btn_icon"
+                    android:layout_width="@dimen/spacing_35"
+                    android:layout_height="@dimen/spacing_35"
+                    android:layout_centerInParent="true"
+                    app:srcCompat="@drawable/ic_no_connect" />
 
-                </RelativeLayout>
+                // Spacing
 
                 <View
                     android:layout_width="@dimen/spacing_10"
                     android:layout_height="@dimen/spacing_0" />
 
+                <!-- Start of Button Text and Description View -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
+
+                    // Button Text
 
                     <TextView
                         android:id="@+id/btn_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/regular"
+                        android:text="@string/txt_ok"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
                         android:textColor="@color/colorHeaderToolbar"
                         android:textStyle="bold" />
+
+                    // Button Description
 
                     <TextView
                         android:id="@+id/btn_des"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/regular"
+                        android:text="@string/txt_ok"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
                         android:textColor="@color/colorHeaderText" />
 
                 </LinearLayout>
+                <!-- End of Button Text and Description View -->
 
             </LinearLayout>
+            <!-- End of Button Text and Icon View -->
 
         </com.balysv.materialripple.MaterialRippleLayout>
+        <!-- End of Ripple Layout Effect -->
+
 
     </android.support.v7.widget.CardView>
+    <!-- End of Social Button View -->
 
 </RelativeLayout>

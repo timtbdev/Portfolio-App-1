@@ -26,15 +26,22 @@
 
     <!--All data for Network, Failed and Empty views -->
     <string name="txt_ok">OK</string>
-    <string name="txt_cancel">CANCEL</string>
     <string name="txt_close">CLOSE</string>
+    <string name="txt_update">UPDATE</string>
     <string name="txt_try_again">TRY AGAIN</string>
-    <string name="txt_failed">Failed When Load Data</string>
-    <string name="msg_failed_load_data">Failed when load data</string>
+    <string name="msg_app_out_date">Application is out of date, please update to get latest version</string>
     <string name="txt_no_internet">No Internet Connection</string>
     <string name="msg_no_internet">Please check your Internet connection and try again</string>
     <string name="txt_unable_connect">No Server Connection</string>
     <string name="msg_unable_connect">Server temporary down or under maintenance</string>
     <string name="txt_no_item">No Item</string>
+    <string name="txt_swipe_to_refresh">Swipe Down to Refresh</string>
+
+    <!--All data ActivityFullScreenImage.java -->
+    <string name="txt_image_of">%1$d - %2$d</string>
+
+    <!--All data ActivityPortfolioItem.java -->
+    <string name="txt_features">features</string>
+    <string name="txt_description">description</string>
 
 </resources>

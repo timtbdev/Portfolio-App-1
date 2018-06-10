@@ -1,12 +1,10 @@
 package info.tumur.resume.app.connection;
 
-import info.tumur.resume.app.connection.callbacks.CallbackCheck;
+import info.tumur.resume.app.connection.callbacks.CallbackCheckVersion;
 import info.tumur.resume.app.connection.callbacks.CallbackContact;
 import info.tumur.resume.app.connection.callbacks.CallbackPortfolio;
-import info.tumur.resume.app.connection.callbacks.CallbackPortfolioDetails;
-import info.tumur.resume.app.connection.callbacks.CallbackSummaryHeader;
-import info.tumur.resume.app.connection.callbacks.CallbackSummarySkills;
-import info.tumur.resume.app.connection.callbacks.CallbackSummarySocial;
+import info.tumur.resume.app.connection.callbacks.CallbackPortfolioItem;
+import info.tumur.resume.app.connection.callbacks.CallbackProfile;
 import info.tumur.resume.app.connection.callbacks.CallbackTimeline;
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -18,41 +16,41 @@ public interface API {
     String CACHE = "Cache-Control: max-age=0";
     String AGENT = "User-Agent: Tumur";
 
-    /* API transaction */
+    /* Web Service API transactions */
 
+    // Connection test API and check application version
     @Headers({CACHE, AGENT})
-    @GET("services/check")
-    Call<CallbackCheck> getCheck();
+    @GET("services/checkVersion")
+    Call<CallbackCheckVersion> getCheckVersion(
+            @Query("version") int version // current version code of the app
+    );
 
+    // Profile data API
     @Headers({CACHE, AGENT})
-    @GET("services/summaryHeader")
-    Call<CallbackSummaryHeader> getSummaryProile();
+    @GET("services/profile")
+    Call<CallbackProfile> getProfile();
 
+    // Timeline data API
     @Headers({CACHE, AGENT})
-    @GET("services/summarySocial")
-    Call<CallbackSummarySocial> getSummarySocial();
-
-    @Headers({CACHE, AGENT})
-    @GET("services/summarySkills")
-    Call<CallbackSummarySkills> getSummarySkills();
-
-    @Headers({CACHE, AGENT})
-    @GET("services/listTimeline")
+    @GET("services/timeline")
     Call<CallbackTimeline> getTimeline(
             @Query("id") int id
     );
 
+    // Contact data API
     @Headers({CACHE, AGENT})
     @GET("services/contact")
     Call<CallbackContact> getContact();
 
+    // Portfolio data API
     @Headers({CACHE, AGENT})
     @GET("services/portfolio")
     Call<CallbackPortfolio> getPortfolio();
 
+    // Single Portfolio Item data API
     @Headers({CACHE, AGENT})
-    @GET("services/portfolioDetails")
-    Call<CallbackPortfolioDetails> getPortfolioDetails(
+    @GET("services/portfolioItem")
+    Call<CallbackPortfolioItem> getPortfolioItem(
             @Query("id") int id
     );
 

@@ -20,12 +20,12 @@ public class AdapterSkills extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     private final int VIEW_ITEM = 1;
     private final int VIEW_SECTION = 0;
     private Context ctx;
-    private List<Skills> items = new ArrayList<>();
+    private List<Skills> skills = new ArrayList<>();
 
-    // Provide a suitable constructor
+    // Constructor
     public AdapterSkills(Context ctx, List<Skills> items) {
         this.ctx = ctx;
-        this.items = items;
+        this.skills = items;
     }
 
     @Override
@@ -41,10 +41,10 @@ public class AdapterSkills extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         return vh;
     }
 
-    // Replace the contents of a view
+    // Setting data
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-        Skills s = items.get(position);
+        Skills s = skills.get(position);
         if (holder instanceof OriginalViewHolder) {
             OriginalViewHolder vItem = (OriginalViewHolder) holder;
             vItem.skill_name.setText(s.skill_name);
@@ -56,18 +56,23 @@ public class AdapterSkills extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
     }
 
+    public void insertData(List<Skills> skills) {
+        this.skills = skills;
+        notifyDataSetChanged();
+    }
+
     @Override
     public int getItemCount() {
-        return items.size();
+        return skills.size();
     }
 
     @Override
     public int getItemViewType(int position) {
-        return this.items.get(position).section ? VIEW_SECTION : VIEW_ITEM;
+        return this.skills.get(position).section ? VIEW_SECTION : VIEW_ITEM;
     }
 
-    public void setItems(int index, Skills skills) {
-        items.add(index, skills);
+    public void resetListData(int index, Skills skills_data) {
+        skills.add(index, skills_data);
         notifyDataSetChanged();
     }
 

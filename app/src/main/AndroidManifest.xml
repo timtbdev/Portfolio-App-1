@@ -24,11 +24,12 @@
         </activity>
         <activity
             android:name=".ActivityMain"
+            android:launchMode="singleTop"
             android:configChanges="orientation|keyboardHidden|screenSize" />
         <activity android:name=".ActivityTimeline" />
         <activity android:name=".ActivityContact" />
         <activity android:name=".ActivityPortfolio" />
-        <activity android:name=".ActivityPortfolioDetails" />
+        <activity android:name=".ActivityPortfolioItem" />
         <activity android:name=".ActivityFullScreenImage" />
     </application>
 

@@ -7,6 +7,8 @@
     android:foreground="?android:attr/selectableItemBackground"
     android:orientation="vertical">
 
+    // Spacing
+
     <View
         android:layout_width="@dimen/spacing_0"
         android:layout_height="@dimen/spacing_5" />
@@ -25,7 +27,7 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/image"
+                android:id="@+id/portfolio_image"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/spacing_180"
                 android:background="@color/colorPortfolioItem" />
@@ -41,7 +43,7 @@
                 android:paddingTop="@dimen/spacing_5">
 
                 <TextView
-                    android:id="@+id/title"
+                    android:id="@+id/portfolio_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/semi"
@@ -59,16 +61,16 @@
 
 
                     <ImageView
-                        android:id="@+id/category"
+                        android:id="@+id/portfolio_category"
                         android:layout_width="@dimen/spacing_15"
                         android:layout_height="@dimen/spacing_15"
                         android:layout_marginEnd="@dimen/spacing_5"
                         android:layout_marginRight="@dimen/spacing_5"
                         android:tint="@color/grey_80"
-                        app:srcCompat="@drawable/loading_placeholder" />
+                        app:srcCompat="@drawable/ic_placeholder" />
 
                     <TextView
-                        android:id="@+id/brief"
+                        android:id="@+id/portfolio_brief"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/regular"

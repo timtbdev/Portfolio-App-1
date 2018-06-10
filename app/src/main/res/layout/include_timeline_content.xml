@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerViewTimeLine"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:nestedScrollingEnabled="true"
+        android:scrollingCache="true" />
+
+    <!-- Spacing -->
+    <View
+        android:layout_width="@dimen/spacing_0"
+        android:layout_height="?android:attr/actionBarSize" />
+
+</android.support.design.widget.CoordinatorLayout>

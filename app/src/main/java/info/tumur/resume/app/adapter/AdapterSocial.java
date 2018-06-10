@@ -21,15 +21,15 @@ import info.tumur.resume.app.utils.Tools;
 
 public class AdapterSocial extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    private Context ctx;
-    private List<Social> items = new ArrayList<>();
+    private Context ctx; // Context for UI
+    private List<Social> social = new ArrayList<>();
 
     private OnItemClickListener onItemClickListener;
 
-    // Provide a suitable constructor
-    public AdapterSocial(Context ctx, List<Social> items) {
+    // Constructor
+    public AdapterSocial(Context ctx, List<Social> social) {
         this.ctx = ctx;
-        this.items = items;
+        this.social = social;
     }
 
     public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
@@ -44,15 +44,15 @@ public class AdapterSocial extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         return vh;
     }
 
-    // Replace the contents of a view
+    // Setting data
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         if (holder instanceof ViewHolder) {
             ViewHolder vItem = (ViewHolder) holder;
-            final Social s = items.get(position);
-            vItem.btn_text.setText(s.btn_text);
-            vItem.btn_des.setText(s.btn_des);
-            Tools.displayImageThumbnail(ctx, vItem.btn_icon, Constant.getURLimg(s.btn_icon), 0.5f);
+            final Social s = social.get(position);
+            vItem.social_btn_text.setText(s.social_btn_text);
+            vItem.social_btn_des.setText(s.social_btn_des);
+            Tools.displayImageThumbnail(ctx, vItem.social_btn_icon, Constant.getURLimg(s.social_btn_icon), 0.5f);
 
             vItem.lyt_parent.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -66,9 +66,14 @@ public class AdapterSocial extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
     }
 
+    public void insertData(List<Social> social) {
+        this.social = social;
+        notifyDataSetChanged();
+    }
+
     @Override
     public int getItemCount() {
-        return items.size();
+        return social.size();
     }
 
     @Override
@@ -76,8 +81,8 @@ public class AdapterSocial extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         return position;
     }
 
-    public void setItems(List<Social> items) {
-        this.items = items;
+    public void resetListData(List<Social> items) {
+        this.social = items;
         notifyDataSetChanged();
     }
 
@@ -86,16 +91,16 @@ public class AdapterSocial extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView btn_text;
-        public TextView btn_des;
-        public ImageView btn_icon;
+        public TextView social_btn_text;
+        public TextView social_btn_des;
+        public ImageView social_btn_icon;
         public MaterialRippleLayout lyt_parent;
 
         public ViewHolder(View v) {
             super(v);
-            btn_text = v.findViewById(R.id.btn_text);
-            btn_des = v.findViewById(R.id.btn_des);
-            btn_icon = v.findViewById(R.id.btn_icon);
+            social_btn_text = v.findViewById(R.id.btn_text);
+            social_btn_des = v.findViewById(R.id.btn_des);
+            social_btn_icon = v.findViewById(R.id.btn_icon);
             lyt_parent = v.findViewById(R.id.lyt_parent);
         }
     }

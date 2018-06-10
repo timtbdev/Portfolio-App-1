@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class PortfolioImage implements Serializable {
 
-    public int portfolio_id;
-    public String name;
+    public int id;
+    public String portfolio_image;
 
 }

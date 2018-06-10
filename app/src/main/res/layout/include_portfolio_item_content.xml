@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:clipToPadding="false"
+        android:scrollbars="vertical"
+        android:scrollingCache="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!-- Start of Main content -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="vertical">
+
+            <!-- Start of Portfolio Images View -->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/spacing_240"
+                android:layout_weight="1">
+
+                // ViewPager for Portfolio Images
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/colorPortfolioItem" />
+
+                // Indicator dots for Portfolio Images
+
+                <LinearLayout
+                    android:id="@+id/layout_dots"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="end|center_vertical"
+                    android:orientation="horizontal" />
+
+            </RelativeLayout>
+            <!-- End of Portfolio Images View -->
+
+            <!-- Spacing -->
+            <View
+                android:layout_width="@dimen/spacing_0"
+                android:layout_height="@dimen/spacing_10" />
+
+            <!-- Start of Portfolio Title View -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <!-- Spacing -->
+                <View
+                    android:layout_width="@dimen/spacing_10"
+                    android:layout_height="@dimen/spacing_0" />
+
+                // Title
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/semi"
+                    android:singleLine="true"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                    android:textColor="@color/colorHeaderToolbar"
+                    android:textStyle="bold" />
+
+                // Spacing
+
+                <View
+                    android:layout_width="@dimen/spacing_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                // Brief Description
+
+                <TextView
+                    android:id="@+id/brief"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorBackground"
+                    android:fontFamily="@font/semi"
+                    android:singleLine="true"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorHeaderToolbar"
+                    android:textSize="@dimen/txt_16"
+                    android:visibility="visible" />
+
+                <!-- Spacing -->
+                <View
+                    android:layout_width="@dimen/spacing_10"
+                    android:layout_height="@dimen/spacing_0" />
+
+            </LinearLayout>
+            <!-- End of Portfolio Title View -->
+
+            <!-- Spacing -->
+            <View
+                android:layout_width="@dimen/spacing_0"
+                android:layout_height="@dimen/spacing_5" />
+
+            <!-- Start of Portfolio Date View -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!-- Spacing -->
+                <View
+                    android:layout_width="@dimen/spacing_10"
+                    android:layout_height="@dimen/spacing_0" />
+
+                // Date Icon
+
+                <ImageView
+                    android:layout_width="@dimen/spacing_16"
+                    android:layout_height="@dimen/spacing_16"
+                    android:tint="@color/grey_80"
+                    app:srcCompat="@drawable/ic_calendar" />
+
+                <!-- Spacing -->
+                <View
+                    android:layout_width="@dimen/spacing_5"
+                    android:layout_height="@dimen/spacing_0" />
+
+                // Icon
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/regular"
+                    android:singleLine="true"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                    android:textColor="@color/grey_80"
+                    android:textSize="@dimen/txt_16" />
+
+                <!-- Spacing -->
+                <View
+                    android:layout_width="@dimen/spacing_10"
+                    android:layout_height="@dimen/spacing_0" />
+
+            </LinearLayout>
+            <!-- End of Portfolio Date View -->
+
+            // Spacing
+
+            <View
+                android:layout_width="@dimen/spacing_0"
+                android:layout_height="@dimen/spacing_5" />
+
+            <!-- Start of Portfolio Item Button View -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPortfolioItem"
+                android:orientation="vertical">
+
+                <!-- Spacing -->
+                <View
+                    android:layout_width="@dimen/spacing_0"
+                    android:layout_height="@dimen/spacing_5" />
+
+                // URL Button
+
+                <Button
+                    android:id="@+id/url"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/semi"
+                    android:gravity="center"
+                    android:theme="@style/Button.Primary" />
+
+                <!-- Spacing -->
+                <View
+                    android:layout_width="@dimen/spacing_0"
+                    android:layout_height="@dimen/spacing_5" />
+
+            </LinearLayout>
+            <!-- End of Portfolio Item Button View -->
+
+            // Seperator
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_1"
+                android:background="@color/colorBackground" />
+
+            <!-- Spacing -->
+            <View
+                android:layout_width="@dimen/spacing_0"
+                android:layout_height="@dimen/spacing_10" />
+
+            <!-- Start of Portfolio Item Title Features View -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!-- Spacing -->
+                <View
+                    android:layout_width="@dimen/spacing_10"
+                    android:layout_height="@dimen/spacing_0" />
+
+                // Features Icon
+
+                <ImageView
+                    android:layout_width="@dimen/spacing_18"
+                    android:layout_height="@dimen/spacing_18"
+                    android:tint="@color/grey_80"
+                    app:srcCompat="@drawable/ic_web" />
+
+                <!-- Spacing -->
+                <View
+                    android:layout_width="@dimen/spacing_5"
+                    android:layout_height="@dimen/spacing_0" />
+
+                // Title Features
+
+                <TextView
+                    android:id="@+id/title_features"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/semi"
+                    android:textAllCaps="true"
+                    android:textColor="@color/grey_80"
+                    android:textSize="@dimen/txt_16" />
+
+                <!-- Spacing -->
+                <View
+                    android:layout_width="@dimen/spacing_10"
+                    android:layout_height="@dimen/spacing_0" />
+
+            </LinearLayout>
+            <!-- End of Portfolio Item Title Features View -->
+
+            <!-- Spacing -->
+            <View
+                android:layout_width="@dimen/spacing_0"
+                android:layout_height="@dimen/spacing_10" />
+
+            // Seperator
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_1"
+                android:background="@color/colorBackground" />
+
+            <!-- Spacing -->
+            <View
+                android:layout_width="@dimen/spacing_0"
+                android:layout_height="@dimen/spacing_10" />
+
+            <!-- Start of Portfolio Item Features View -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:orientation="horizontal">
+
+                <!-- Spacing -->
+                <View
+                    android:layout_width="@dimen/spacing_10"
+                    android:layout_height="@dimen/spacing_0" />
+
+                <TextView
+                    android:id="@+id/features"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/regular"
+                    android:lineSpacingExtra="@dimen/spacing_5"
+                    android:textSize="@dimen/txt_16" />
+
+                <!-- Spacing -->
+                <View
+                    android:layout_width="@dimen/spacing_10"
+                    android:layout_height="@dimen/spacing_0" />
+
+            </LinearLayout>
+            <!-- End of Portfolio Item Features View -->
+
+            <!-- Spacing -->
+            <View
+                android:layout_width="@dimen/spacing_0"
+                android:layout_height="@dimen/spacing_10" />
+
+            // Seperator
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_1"
+                android:background="@color/colorBackground" />
+
+            <!-- Spacing -->
+            <View
+                android:layout_width="@dimen/spacing_0"
+                android:layout_height="@dimen/spacing_10" />
+
+            <!-- Start of Portfolio Item Title Description View -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!-- Spacing -->
+                <View
+                    android:layout_width="@dimen/spacing_10"
+                    android:layout_height="@dimen/spacing_0" />
+
+                // Description Icon
+
+                <ImageView
+                    android:layout_width="@dimen/spacing_18"
+                    android:layout_height="@dimen/spacing_18"
+                    android:tint="@color/grey_80"
+                    app:srcCompat="@drawable/ic_portfolio" />
+
+                <!-- Spacing -->
+                <View
+                    android:layout_width="@dimen/spacing_5"
+                    android:layout_height="@dimen/spacing_0" />
+
+                // Description Title
+
+                <TextView
+                    android:id="@+id/title_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/semi"
+                    android:textAllCaps="true"
+                    android:textColor="@color/grey_80"
+                    android:textSize="@dimen/txt_16" />
+
+                <!-- Spacing -->
+                <View
+                    android:layout_width="@dimen/spacing_10"
+                    android:layout_height="@dimen/spacing_0" />
+
+            </LinearLayout>
+            <!-- End of Portfolio Item Title Description View -->
+
+            <!-- Spacing -->
+            <View
+                android:layout_width="@dimen/spacing_0"
+                android:layout_height="@dimen/spacing_10" />
+
+            // Seperator
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_1"
+                android:background="@color/colorBackground" />
+
+            <!-- Spacing -->
+            <View
+                android:layout_width="@dimen/spacing_0"
+                android:layout_height="@dimen/spacing_10" />
+
+            <!-- Start of Portfolio Item Description View -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:orientation="horizontal">
+
+                <!-- Spacing -->
+                <View
+                    android:layout_width="@dimen/spacing_10"
+                    android:layout_height="@dimen/spacing_0" />
+
+                // Description
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/regular"
+                    android:lineSpacingExtra="@dimen/spacing_5"
+                    android:textSize="@dimen/txt_16" />
+
+                <!-- Spacing -->
+                <View
+                    android:layout_width="@dimen/spacing_10"
+                    android:layout_height="@dimen/spacing_0" />
+
+            </LinearLayout>
+            <!-- End of Portfolio Item Description View -->
+
+            // Spacing
+
+            <View
+                android:layout_width="@dimen/spacing_0"
+                android:layout_height="@dimen/spacing_10" />
+
+        </LinearLayout>
+        <!-- End of Main content -->
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

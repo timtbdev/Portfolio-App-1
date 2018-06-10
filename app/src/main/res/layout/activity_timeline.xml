@@ -1,66 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Toolbar & Header -->
+    <!-- Start of Appbar -->
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-        <include layout="@layout/toolbar" />
+        // Toolbar
+
+        <include layout="@layout/include_toolbar" />
 
     </android.support.design.widget.AppBarLayout>
+    <!-- End of Appbar -->
 
-    <android.support.v4.widget.SwipeRefreshLayout
+    <android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/swipe_refresh_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/app_bar_layout"
-        android:background="@color/grey_80"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
+        <!-- Start of Main Contents -->
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/grey_10"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/recyclerView"
+            // Progressbar
+
+            <include
+                android:id="@+id/lyt_progress_bar"
+                layout="@layout/include_progress_bar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:nestedScrollingEnabled="true"
-                android:paddingEnd="@dimen/spacing_10"
-                android:paddingLeft="@dimen/spacing_10"
-                android:paddingRight="@dimen/spacing_10"
-                android:paddingStart="@dimen/spacing_10"
-                android:scrollingCache="true" />
+                android:visibility="gone" />
 
+            // Sub contents
 
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:paddingBottom="@dimen/spacing_150"
-                android:visibility="visible">
+            <include
+                android:id="@+id/lyt_main_content"
+                layout="@layout/include_timeline_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
 
-                <include
-                    android:id="@+id/lyt_no_item"
-                    layout="@layout/include_no_item"
-                    android:visibility="gone" />
+            // Show IF no internet connection
 
-                <include
-                    android:id="@+id/lyt_failed"
-                    layout="@layout/include_failed"
-                    android:visibility="gone" />
+            <include
+                android:id="@+id/lyt_no_internet"
+                layout="@layout/include_no_internet"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
 
-            </RelativeLayout>
+            // Show IF no server connection
+
+            <include
+                android:id="@+id/lyt_no_connect"
+                layout="@layout/include_no_connect"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            // Show IF no item is to display
+
+            <include
+                android:id="@+id/lyt_no_item"
+                layout="@layout/include_no_item"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
 
         </RelativeLayout>
+        <!-- End of Main Contents -->
 
     </android.support.v4.widget.SwipeRefreshLayout>
 

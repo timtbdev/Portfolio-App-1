@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground"
+        android:clipToPadding="false"
+        android:scrollbars="none"
+        android:scrollingCache="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!-- Start of Main Content -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBackground"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            // Header
+
+            <include
+                layout="@layout/include_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- Spacing -->
+            <View
+                android:layout_width="@dimen/spacing_0"
+                android:layout_height="@dimen/spacing_7" />
+
+        </LinearLayout>
+        <!-- End of Main Content -->
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

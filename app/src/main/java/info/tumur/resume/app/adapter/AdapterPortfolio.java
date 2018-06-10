@@ -18,14 +18,13 @@ import info.tumur.resume.app.utils.Tools;
 
 public class AdapterPortfolio extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    private List<Portfolio> items = new ArrayList<>();
-
     private Context ctx;
+    private List<Portfolio> portfolio = new ArrayList<>();
     private OnItemClickListener mOnItemClickListener;
 
-    // Provide a suitable constructor
-    public AdapterPortfolio(Context context, RecyclerView view, List<Portfolio> items) {
-        this.items = items;
+    // Constructor
+    public AdapterPortfolio(Context context, List<Portfolio> portfolio) {
+        this.portfolio = portfolio;
         ctx = context;
     }
 
@@ -41,30 +40,31 @@ public class AdapterPortfolio extends RecyclerView.Adapter<RecyclerView.ViewHold
         return vh;
     }
 
+    // Setting data
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
         if (holder instanceof OriginalViewHolder) {
             OriginalViewHolder view = (OriginalViewHolder) holder;
 
-            Portfolio p = items.get(position);
-            view.title.setText(p.title);
-            view.brief.setText(p.brief);
-            switch (p.type) {
+            Portfolio p = portfolio.get(position);
+            view.portfolio_title.setText(p.portfolio_title);
+            view.portfolio_brief.setText(p.portfolio_brief);
+            switch (p.portfolio_type) {
                 case "web":
-                    view.category.setImageDrawable(ctx.getResources().getDrawable(R.drawable.ic_btn_web));
+                    view.portfolio_category.setImageDrawable(ctx.getResources().getDrawable(R.drawable.ic_btn_web));
                     break;
                 case "android":
-                    view.category.setImageDrawable(ctx.getResources().getDrawable(R.drawable.ic_android));
+                    view.portfolio_category.setImageDrawable(ctx.getResources().getDrawable(R.drawable.ic_android));
                     break;
                 default:
                     break;
             }
-            Tools.displayImageThumbnail(ctx, view.image_bg, Constant.getURLimg(p.image_bg), 0.1f);
+            Tools.displayImageThumbnail(ctx, view.portfolio_image, Constant.getURLimg(p.portfolio_image), 0.1f);
             view.lyt_parent.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     if (mOnItemClickListener != null) {
-                        mOnItemClickListener.onItemClick(view, items.get(position), position);
+                        mOnItemClickListener.onItemClick(view, portfolio.get(position), position);
                     }
                 }
             });
@@ -73,16 +73,16 @@ public class AdapterPortfolio extends RecyclerView.Adapter<RecyclerView.ViewHold
 
     @Override
     public int getItemCount() {
-        return items.size();
+        return portfolio.size();
     }
 
-    public void insertData(List<Portfolio> items) {
-        this.items = items;
+    public void insertData(List<Portfolio> portfolio) {
+        this.portfolio = portfolio;
         notifyDataSetChanged();
     }
 
     public void resetListData() {
-        this.items = new ArrayList<>();
+        this.portfolio = new ArrayList<>();
         notifyDataSetChanged();
     }
 
@@ -91,18 +91,18 @@ public class AdapterPortfolio extends RecyclerView.Adapter<RecyclerView.ViewHold
     }
 
     public class OriginalViewHolder extends RecyclerView.ViewHolder {
-        public ImageView image_bg;
-        public ImageView category;
-        public TextView title;
-        public TextView brief;
+        public ImageView portfolio_image;
+        public ImageView portfolio_category;
+        public TextView portfolio_title;
+        public TextView portfolio_brief;
         public View lyt_parent;
 
         public OriginalViewHolder(View v) {
             super(v);
-            image_bg = v.findViewById(R.id.image);
-            title = v.findViewById(R.id.title);
-            brief = v.findViewById(R.id.brief);
-            category = v.findViewById(R.id.category);
+            portfolio_image = v.findViewById(R.id.portfolio_image);
+            portfolio_title = v.findViewById(R.id.portfolio_title);
+            portfolio_brief = v.findViewById(R.id.portfolio_brief);
+            portfolio_category = v.findViewById(R.id.portfolio_category);
             lyt_parent = v.findViewById(R.id.lyt_parent);
         }
     }

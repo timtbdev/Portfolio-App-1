@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Start of Header View -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spacing_240">
+
+            // Background image for header
+
+            <ImageView
+                android:id="@+id/background_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:foreground="@color/colorHeaderBackgroundOverlay"
+                android:scaleType="centerCrop" />
+
+            <!-- Start of Header Content View -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                // Spacing
+
+                <View
+                    android:layout_width="@dimen/spacing_0"
+                    android:layout_height="@dimen/spacing_25" />
+
+                // Avatar
+
+                <com.mikhaellopez.circularimageview.CircularImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/avatar"
+                    android:layout_width="@dimen/spacing_100"
+                    android:layout_height="@dimen/spacing_100"
+                    app:civ_border_color="@android:color/white"
+                    app:civ_border_width="@dimen/spacing_2" />
+
+                // Spacing
+
+                <View
+                    android:layout_width="@dimen/spacing_0"
+                    android:layout_height="@dimen/spacing_5" />
+
+                // Name
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/semi"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textColor="@color/colorHeaderSmallText" />
+
+                // Spacing
+
+                <View
+                    android:layout_width="@dimen/spacing_0"
+                    android:layout_height="@dimen/spacing_5" />
+
+                <!-- Start of Title and Icon View -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    // Icon
+
+                    <ImageView
+                        android:layout_width="@dimen/spacing_15"
+                        android:layout_height="@dimen/spacing_15"
+                        android:tint="@color/colorHeaderSmallText"
+                        app:srcCompat="@drawable/ic_android" />
+
+                    // Spacing
+
+                    <View
+                        android:layout_width="@dimen/spacing_5"
+                        android:layout_height="@dimen/spacing_0" />
+
+                    // Title
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/regular"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/colorHeaderSmallText"
+                        android:textSize="@dimen/txt_16" />
+
+                </LinearLayout>
+                <!-- End of Title and Icon View-->
+
+                // Spacing
+
+                <View
+                    android:layout_width="@dimen/spacing_0"
+                    android:layout_height="@dimen/spacing_5" />
+
+                <!-- Start of Location and Icon View -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/spacing_15"
+                        android:layout_height="@dimen/spacing_15"
+                        android:tint="@color/colorHeaderSmallText"
+                        app:srcCompat="@drawable/ic_sf" />
+
+                    // Spacing
+
+                    <View
+                        android:layout_width="@dimen/spacing_5"
+                        android:layout_height="@dimen/spacing_0" />
+
+                    <TextView
+                        android:id="@+id/location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/regular"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/colorHeaderSmallText"
+                        android:textSize="@dimen/txt_16" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- End of Header Content View -->
+
+        </RelativeLayout>
+        <!-- End of Header CView -->
+
+        // Spacing
+
+        <View
+            android:layout_width="@dimen/spacing_0"
+            android:layout_height="@dimen/spacing_7" />
+
+        // Social Buttons
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerViewSocial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:scrollbars="none" />
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

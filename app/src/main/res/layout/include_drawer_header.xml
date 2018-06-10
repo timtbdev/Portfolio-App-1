@@ -6,6 +6,8 @@
     android:orientation="vertical"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
+    // Background Image
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="@dimen/spacing_drawer_header"
@@ -13,78 +15,119 @@
         android:scaleType="centerCrop"
         app:srcCompat="@drawable/drawer_bg" />
 
+    <!-- Start of Main content -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/spacing_10"
-        android:gravity="center_horizontal"
+        android:gravity="center"
         android:orientation="vertical">
+
+        // Spacing
+
+        <View
+            android:layout_width="@dimen/spacing_0"
+            android:layout_height="@dimen/spacing_10" />
+
+        // Avatar
 
         <com.mikhaellopez.circularimageview.CircularImageView
             android:layout_width="@dimen/spacing_64"
             android:layout_height="@dimen/spacing_64"
-            android:layout_marginBottom="@dimen/spacing_7"
             android:src="@drawable/profile"
             app:civ_border_color="@android:color/white"
-            app:civ_border_width="@dimen/spacing_2" />
+            app:civ_border_width="@dimen/spacing_1" />
+
+        // Spacing
+
+        <View
+            android:layout_width="@dimen/spacing_0"
+            android:layout_height="@dimen/spacing_7" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/spacing_3"
             android:fontFamily="@font/semi"
             android:text="@string/txt_name"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
+        // Spacing
+
+        <View
+            android:layout_width="@dimen/spacing_0"
+            android:layout_height="@dimen/spacing_3" />
+
+        <!-- Start of Profession View -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/spacing_2"
             android:gravity="center"
             android:orientation="horizontal">
+
+            // Icon
 
             <ImageView
                 android:layout_width="@dimen/spacing_15"
                 android:layout_height="@dimen/spacing_15"
-                android:layout_marginEnd="@dimen/spacing_5"
-                android:layout_marginRight="@dimen/spacing_5"
                 android:tint="@color/colorHeaderSmallText"
                 app:srcCompat="@drawable/ic_android" />
+
+            // Spacing
+
+            <View
+                android:layout_width="@dimen/spacing_3"
+                android:layout_height="@dimen/spacing_0" />
+
+            // Profession
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/semi"
+                android:fontFamily="@font/regular"
                 android:text="@string/txt_android"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
         </LinearLayout>
+        <!-- End of Profession View -->
 
+        // Spacing
+
+        <View
+            android:layout_width="@dimen/spacing_0"
+            android:layout_height="@dimen/spacing_3" />
+
+        <!-- Start of Location View -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/spacing_2"
             android:gravity="center"
             android:orientation="horizontal">
+
+            // Icon
 
             <ImageView
                 android:layout_width="@dimen/spacing_15"
                 android:layout_height="@dimen/spacing_15"
-                android:layout_marginEnd="@dimen/spacing_5"
-                android:layout_marginRight="@dimen/spacing_5"
                 android:tint="@color/colorHeaderSmallText"
                 app:srcCompat="@drawable/ic_location" />
+
+            // Spacing
+
+            <View
+                android:layout_width="@dimen/spacing_3"
+                android:layout_height="@dimen/spacing_0" />
+
+            // Location
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/semi"
-                android:paddingRight="@dimen/spacing_10"
+                android:fontFamily="@font/regular"
                 android:text="@string/txt_location"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
         </LinearLayout>
-
+        <!-- End of Location View -->
     </LinearLayout>
+    <!-- End of Main content -->
 
 </RelativeLayout>

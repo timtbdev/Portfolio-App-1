@@ -5,7 +5,7 @@ public class Constant {
     // WEB_URL with your url. Make sure you have backslash('/') in the end url
     public static String WEB_URL = "http://tumur.info/";
 
-    // Method get path to image
+    // Path to image
     public static String getURLimg(String file_name) {
         return WEB_URL + "app/images/" + file_name;
     }

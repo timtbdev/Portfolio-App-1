@@ -21,15 +21,15 @@ import info.tumur.resume.app.utils.Tools;
 
 public class AdapterContact extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    private Context ctx;
-    private List<Contact> items = new ArrayList<>();
+    private Context ctx; // Context for UI
+    private List<Contact> contact = new ArrayList<>();
 
     private OnItemClickListener onItemClickListener;
 
-    // Provide a suitable constructor
-    public AdapterContact(Context ctx, ArrayList<Contact> items) {
+    // Constructor
+    public AdapterContact(Context ctx, List<Contact> contact) {
         this.ctx = ctx;
-        this.items = items;
+        this.contact = contact;
     }
 
     public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
@@ -44,15 +44,15 @@ public class AdapterContact extends RecyclerView.Adapter<RecyclerView.ViewHolder
         return vh;
     }
 
-    // Replace the contents of a view
+    // Setting data
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         if (holder instanceof ViewHolder) {
             ViewHolder vItem = (ViewHolder) holder;
-            final Contact c = items.get(position);
-            vItem.btn_text.setText(c.btn_text);
-            vItem.btn_des.setText(c.btn_des);
-            Tools.displayImageThumbnail(ctx, vItem.btn_icon, Constant.getURLimg(c.btn_icon), 0.5f);
+            final Contact c = contact.get(position);
+            vItem.contact_btn_text.setText(c.contact_btn_text);
+            vItem.contact_btn_des.setText(c.contact_btn_des);
+            Tools.displayImageThumbnail(ctx, vItem.contact_btn_icon, Constant.getURLimg(c.contact_btn_icon), 0.5f);
 
             vItem.lyt_parent.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -66,9 +66,14 @@ public class AdapterContact extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
     }
 
+    public void insertData(List<Contact> contact) {
+        this.contact = contact;
+        notifyDataSetChanged();
+    }
+
     @Override
     public int getItemCount() {
-        return items.size();
+        return contact.size();
     }
 
     @Override
@@ -77,7 +82,7 @@ public class AdapterContact extends RecyclerView.Adapter<RecyclerView.ViewHolder
     }
 
     public void setItems(List<Contact> items) {
-        this.items = items;
+        this.contact = items;
         notifyDataSetChanged();
     }
 
@@ -86,16 +91,16 @@ public class AdapterContact extends RecyclerView.Adapter<RecyclerView.ViewHolder
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView btn_text;
-        public TextView btn_des;
-        public ImageView btn_icon;
+        public TextView contact_btn_text;
+        public TextView contact_btn_des;
+        public ImageView contact_btn_icon;
         public MaterialRippleLayout lyt_parent;
 
         public ViewHolder(View v) {
             super(v);
-            btn_text = v.findViewById(R.id.btn_text);
-            btn_des = v.findViewById(R.id.btn_des);
-            btn_icon = v.findViewById(R.id.btn_icon);
+            contact_btn_text = v.findViewById(R.id.btn_text);
+            contact_btn_des = v.findViewById(R.id.btn_des);
+            contact_btn_icon = v.findViewById(R.id.btn_icon);
             lyt_parent = v.findViewById(R.id.lyt_parent);
         }
     }

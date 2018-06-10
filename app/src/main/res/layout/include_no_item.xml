@@ -1,28 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical">
 
         <ImageView
             android:layout_width="@dimen/spacing_80"
             android:layout_height="@dimen/spacing_80"
-            app:srcCompat="@drawable/img_no_item" />
+            app:srcCompat="@drawable/ic_no_item" />
+
+        <!-- Spacing -->
+        <View
+            android:layout_width="@dimen/spacing_0"
+            android:layout_height="@dimen/spacing_5" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/semi"
             android:text="@string/txt_no_item"
             android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
             android:textColor="@color/grey_80" />
+
+        <!-- Spacing -->
+        <View
+            android:layout_width="@dimen/spacing_0"
+            android:layout_height="@dimen/spacing_5" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/spacing_15"
+                android:layout_height="@dimen/spacing_15"
+                android:backgroundTint="@color/colorHeaderText"
+                app:srcCompat="@drawable/ic_swipe_to_refresh" />
+
+            <!-- Spacing -->
+            <View
+                android:layout_width="@dimen/spacing_5"
+                android:layout_height="@dimen/spacing_0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:text="@string/txt_swipe_to_refresh"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/colorHeaderText" />
+
+        </LinearLayout>
+
     </LinearLayout>
 
-</RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

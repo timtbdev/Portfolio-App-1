@@ -6,7 +6,6 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.AppCompatDelegate;
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.google.firebase.analytics.FirebaseAnalytics;
@@ -33,8 +32,8 @@ public class ActivityFullScreenImage extends AppCompatActivity {
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
         setContentView(R.layout.activity_full_screen_image);
-        viewPager = (ViewPager) findViewById(R.id.pager);
-        text_page = (TextView) findViewById(R.id.text_page);
+        viewPager = findViewById(R.id.pager);
+        text_page = findViewById(R.id.text_page);
 
         ArrayList<String> items = new ArrayList<>();
         Intent i = getIntent();
@@ -44,7 +43,7 @@ public class ActivityFullScreenImage extends AppCompatActivity {
         final int total = adapter.getCount();
         viewPager.setAdapter(adapter);
 
-        text_page.setText(String.format(getString(R.string.image_of), (position + 1), total));
+        text_page.setText(String.format(getString(R.string.txt_image_of), (position + 1), total));
 
         // displaying selected image first
         viewPager.setCurrentItem(position);
@@ -56,7 +55,7 @@ public class ActivityFullScreenImage extends AppCompatActivity {
 
             @Override
             public void onPageSelected(int pos) {
-                text_page.setText(String.format(getString(R.string.image_of), (pos + 1), total));
+                text_page.setText(String.format(getString(R.string.txt_image_of), (pos + 1), total));
             }
 
             @Override
@@ -66,7 +65,7 @@ public class ActivityFullScreenImage extends AppCompatActivity {
         });
 
 
-        ((ImageButton) findViewById(R.id.btnClose)).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btnClose).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();

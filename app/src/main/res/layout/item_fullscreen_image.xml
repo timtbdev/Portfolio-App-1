@@ -4,6 +4,8 @@
     android:layout_height="wrap_content"
     android:fitsSystemWindows="false">
 
+    // Image
+
     <info.tumur.resume.app.widget.TouchImageView
         android:id="@+id/imgDisplay"
         android:layout_width="fill_parent"

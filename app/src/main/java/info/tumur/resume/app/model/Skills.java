@@ -6,7 +6,7 @@ public class Skills implements Serializable {
     public String skill_name;
     public String skill_description;
     public String skill_category;
-    public boolean section = false;
+    public boolean section = false; // section for category
 
     public Skills() {
     }

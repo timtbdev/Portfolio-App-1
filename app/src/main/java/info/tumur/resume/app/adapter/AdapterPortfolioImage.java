@@ -25,7 +25,7 @@ public class AdapterPortfolioImage extends PagerAdapter {
 
     private OnItemClickListener onItemClickListener;
 
-    // Provide a suitable constructor
+    // Constructor
     public AdapterPortfolioImage(Activity activity, List<PortfolioImage> items) {
         this.act = activity;
         this.items = items;
@@ -54,20 +54,20 @@ public class AdapterPortfolioImage extends PagerAdapter {
         return view == object;
     }
 
-    // Replace the contents of a view
+    // Setting data
     @Override
     public Object instantiateItem(ViewGroup container, final int position) {
-        final PortfolioImage o = items.get(position);
+        final PortfolioImage p = items.get(position);
         LayoutInflater inflater = (LayoutInflater) act.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View v = inflater.inflate(R.layout.item_portfolio_image, container, false);
         ImageView image = v.findViewById(R.id.image);
         MaterialRippleLayout lyt_parent = v.findViewById(R.id.lyt_parent);
-        Tools.displayImageOriginal(act, image, Constant.getURLimg(o.name));
+        Tools.displayImageOriginal(act, image, Constant.getURLimg(p.portfolio_image));
         lyt_parent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(final View v) {
                 if (onItemClickListener != null) {
-                    onItemClickListener.onItemClick(v, o, position);
+                    onItemClickListener.onItemClick(v, p, position);
                 }
             }
         });

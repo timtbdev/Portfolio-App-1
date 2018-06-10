@@ -4,10 +4,10 @@ import java.io.Serializable;
 
 public class Contact implements Serializable {
 
-    public String btn_text;
-    public String btn_des;
-    public String btn_icon;
-    public String btn_url;
-    public String type;
+    public String contact_btn_text;
+    public String contact_btn_des;
+    public String contact_btn_icon;
+    public String contact_btn_url;
+    public String contact_type;
 
 }

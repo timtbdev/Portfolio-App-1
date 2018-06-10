@@ -3,15 +3,9 @@ package info.tumur.resume.app.model;
 public class Portfolio {
 
     public int id;
-    public String title;
-    public String brief;
-    public String type;
-    public Long date;
-    public String description;
-    public String image_bg;
-    public String features;
-
-    public Portfolio() {
-    }
+    public String portfolio_title;
+    public String portfolio_brief;
+    public String portfolio_type;
+    public String portfolio_image;
 
 }

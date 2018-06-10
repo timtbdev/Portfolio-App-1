@@ -76,17 +76,22 @@ public class Tools {
         }
     }
 
-    public static void shareAction(Activity activity) {
-        Uri uri = Uri.parse("market://details?id=" + activity.getPackageName());
-        Intent goToShare = new Intent(Intent.ACTION_SEND);
-        goToShare.putExtra(Intent.EXTRA_TEXT, "I would like to share this app");
-        goToShare.putExtra(Intent.EXTRA_STREAM, uri);
-        goToShare.setType("text/plain");
-        try {
-            activity.startActivity(Intent.createChooser(goToShare, "Share this app via ..."));
-        } catch (ActivityNotFoundException e) {
-            activity.startActivity(new Intent(Intent.ACTION_SEND, Uri.parse("http://play.google.com/store/apps/details?id=" + activity.getPackageName())));
-        }
+    public static void shareAction(Activity act) {
+
+        // string to share
+        String shareBody = "I would like to share this app\n"
+                + "Download the app : " + getPlayStoreUrl(act);
+
+        Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+        sharingIntent.setType("text/plain");
+
+        sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, act.getString(R.string.txt_app_name));
+        sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+        act.startActivity(Intent.createChooser(sharingIntent, "Share Using"));
+    }
+
+    private static String getPlayStoreUrl(Activity act) {
+        return "http://play.google.com/store/apps/details?id=" + act.getPackageName();
     }
 
 
@@ -103,17 +108,8 @@ public class Tools {
     public static void displayImageOriginal(Context ctx, ImageView img, String url) {
         try {
             Glide.with(ctx).load(url)
-                    .apply(new RequestOptions().diskCacheStrategy(DiskCacheStrategy.NONE))
-                    .into(img);
-        } catch (Exception e) {
-        }
-    }
-
-    public static void displayImageOriginalCircle(Context ctx, ImageView img, String url) {
-        try {
-            Glide.with(ctx).load(url)
-                    .apply(new RequestOptions().diskCacheStrategy(DiskCacheStrategy.NONE))
-                    .apply(RequestOptions.placeholderOf(R.drawable.loading_placeholder))
+                    .apply(new RequestOptions().diskCacheStrategy(DiskCacheStrategy.ALL))
+                    .apply(RequestOptions.placeholderOf(R.drawable.ic_placeholder))
                     .into(img);
         } catch (Exception e) {
         }
@@ -122,8 +118,8 @@ public class Tools {
     public static void displayImageThumbnail(Context ctx, ImageView img, String url, float thumb) {
         try {
             Glide.with(ctx).load(url)
-                    .apply(new RequestOptions().diskCacheStrategy(DiskCacheStrategy.NONE))
-                    .apply(RequestOptions.placeholderOf(R.drawable.loading_placeholder))
+                    .apply(new RequestOptions().diskCacheStrategy(DiskCacheStrategy.ALL))
+                    .apply(RequestOptions.placeholderOf(R.drawable.ic_placeholder))
                     .thumbnail(thumb)
                     .into(img);
         } catch (Exception e) {

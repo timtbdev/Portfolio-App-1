@@ -3,21 +3,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/lyt_parent"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/spacing_40"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/spacing_5"
+    android:layout_marginLeft="@dimen/spacing_20"
+    android:layout_marginRight="@dimen/spacing_20"
     android:gravity="center_vertical"
     android:orientation="horizontal">
+
+    // Bullet point
+
+    <ImageView
+        android:layout_width="@dimen/spacing_15"
+        android:layout_height="@dimen/spacing_15"
+        android:tint="@color/grey_80"
+        app:srcCompat="@drawable/ic_check" />
+
+    // Spacing
 
     <View
         android:layout_width="@dimen/spacing_15"
         android:layout_height="@dimen/spacing_0" />
 
-    <ImageView
-        android:layout_width="@dimen/spacing_15"
-        android:layout_height="@dimen/spacing_15"
-        android:layout_marginEnd="@dimen/spacing_5"
-        android:layout_marginRight="@dimen/spacing_5"
-        android:tint="@color/grey_80"
-        app:srcCompat="@drawable/ic_check" />
+    // Name of Skill
 
     <TextView
         android:id="@+id/skill_name"
@@ -28,6 +35,8 @@
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
         android:textColor="@color/grey_80" />
 
+    // Description of Skill
+
     <TextView
         android:id="@+id/skill_description"
         android:layout_width="wrap_content"
@@ -35,9 +44,5 @@
         android:fontFamily="@font/regular"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
         android:textColor="@color/grey_80" />
-
-    <View
-        android:layout_width="@dimen/spacing_15"
-        android:layout_height="@dimen/spacing_0" />
 
 </LinearLayout>

@@ -37,7 +37,7 @@ public class DialogUtils {
         return dialog;
     }
 
-
+    // Dialog Warning for App version Update, No Internet and Server connections
     public Dialog buildDialogWarning(@StringRes int title, @StringRes int content, @StringRes int bt_text_pos, @StringRes int bt_text_neg, @DrawableRes int icon, final CallbackDialog callback) {
         String _title = null;
         String _content = null;
@@ -60,7 +60,7 @@ public class DialogUtils {
         return buildDialogWarning(_title, _content, activity.getString(bt_text_pos), null, icon, callback);
     }
 
-    // dialog warning
+    // Dialog Warning for No Internet and Server connections
     public Dialog buildDialogWarning(String title, String content, String bt_text_pos, String bt_text_neg, @DrawableRes int icon, final CallbackDialog callback) {
         final Dialog dialog = buildDialogView(R.layout.dialog_warning);
 
@@ -68,31 +68,31 @@ public class DialogUtils {
         if (title != null) {
             ((TextView) dialog.findViewById(R.id.title)).setText(title);
         } else {
-            ((TextView) dialog.findViewById(R.id.title)).setVisibility(View.GONE);
+            dialog.findViewById(R.id.title).setVisibility(View.GONE);
         }
 
         // if id = -1 view will gone
         if (content != null) {
             ((TextView) dialog.findViewById(R.id.content)).setText(content);
         } else {
-            ((TextView) dialog.findViewById(R.id.content)).setVisibility(View.GONE);
+            dialog.findViewById(R.id.content).setVisibility(View.GONE);
         }
         ((Button) dialog.findViewById(R.id.bt_positive)).setText(bt_text_pos);
         if (bt_text_neg != null) {
             ((Button) dialog.findViewById(R.id.bt_negative)).setText(bt_text_neg);
         } else {
-            ((Button) dialog.findViewById(R.id.bt_negative)).setVisibility(View.GONE);
+            dialog.findViewById(R.id.bt_negative).setVisibility(View.GONE);
         }
         ((ImageView) dialog.findViewById(R.id.icon)).setImageResource(icon);
 
-        ((Button) dialog.findViewById(R.id.bt_positive)).setOnClickListener(new View.OnClickListener() {
+        dialog.findViewById(R.id.bt_positive).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 callback.onPositiveClick(dialog);
             }
         });
 
-        ((Button) dialog.findViewById(R.id.bt_negative)).setOnClickListener(new View.OnClickListener() {
+        dialog.findViewById(R.id.bt_negative).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 callback.onNegativeClick(dialog);

@@ -1,88 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- Start of Main Content -->
     <LinearLayout
         android:id="@+id/parent_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/grey_10"
+        android:background="@color/colorBackground"
         android:orientation="vertical">
 
-        <!-- Toolbar & Header -->
+        <!-- Start of Appbar -->
         <android.support.design.widget.AppBarLayout
             android:id="@+id/app_bar_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-            <include layout="@layout/toolbar" />
+            // Toolbar
+
+            <include layout="@layout/include_toolbar" />
 
         </android.support.design.widget.AppBarLayout>
+        <!-- End of Appbar -->
 
-        <RelativeLayout
-            android:id="@+id/progress_bar"
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center"
-            android:visibility="gone">
+            android:layout_below="@+id/app_bar_layout"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-            <com.github.ybq.android.spinkit.SpinKitView xmlns:app="http://schemas.android.com/apk/res-auto"
-                style="@style/SpinKitView.Wave"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                app:SpinKit_Color="@color/colorHeaderText" />
-
-        </RelativeLayout>
-
-
-        <RelativeLayout
-            android:id="@+id/lyt_parent"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <LinearLayout
+            <!-- Start of Sub Contents -->
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:focusableInTouchMode="true"
-                android:gravity="center_horizontal"
-                android:orientation="vertical">
+                android:layout_height="match_parent">
 
-                <!--Fragment Header -->
-                <FrameLayout
-                    android:id="@+id/fragment_summary_header"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-                <!--Fragment Contact-->
-                <FrameLayout
-                    android:id="@+id/fragment_contact"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginEnd="@dimen/spacing_15"
-                    android:layout_marginLeft="@dimen/spacing_15"
-                    android:layout_marginRight="@dimen/spacing_15"
-                    android:layout_marginStart="@dimen/spacing_15"
-                    android:layout_marginTop="@dimen/spacing_7" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:paddingBottom="@dimen/spacing_56">
+                // Progressbar
 
                 <include
-                    android:id="@+id/lyt_failed"
-                    layout="@layout/include_failed"
+                    android:id="@+id/lyt_progress_bar"
+                    layout="@layout/include_progress_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:visibility="gone" />
-            </LinearLayout>
-        </RelativeLayout>
+
+                // Sub contents
+
+                <include
+                    android:id="@+id/lyt_main_content"
+                    layout="@layout/include_contact_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone" />
+
+                // Show IF no internet connection
+
+                <include
+                    android:id="@+id/lyt_no_internet"
+                    layout="@layout/include_no_internet"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone" />
+
+                // Show IF no server connection
+
+                <include
+                    android:id="@+id/lyt_no_connect"
+                    layout="@layout/include_no_connect"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone" />
+
+                // Show IF no item is to display
+
+                <include
+                    android:id="@+id/lyt_no_item"
+                    layout="@layout/include_no_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+            <!-- End of Sub Contents -->
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
     </LinearLayout>
+    <!-- End of Main Content -->
 
 </android.support.constraint.ConstraintLayout>

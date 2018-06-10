@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Start of Introduction View-->
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/spacing_2"
+            app:cardElevation="@dimen/spacing_2">
+
+            <!-- Start of Introduction Content View -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                // Spacing
+
+                <View
+                    android:layout_width="@dimen/spacing_0"
+                    android:layout_height="@dimen/spacing_5" />
+
+                <!-- Start of Introduction Title -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    // Spacing
+
+                    <View
+                        android:layout_width="@dimen/spacing_15"
+                        android:layout_height="@dimen/spacing_0" />
+
+                    // Icon
+
+                    <ImageView
+                        android:layout_width="@dimen/spacing_40"
+                        android:layout_height="@dimen/spacing_40"
+                        app:srcCompat="@drawable/ic_introduction" />
+
+                    // Spacing
+
+                    <View
+                        android:layout_width="@dimen/spacing_5"
+                        android:layout_height="@dimen/spacing_0" />
+
+                    // Title
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/semi"
+                        android:text="@string/txt_main_menu_summary"
+                        android:textAllCaps="true"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colorHeaderText" />
+
+                </LinearLayout>
+                <!-- End of Introduction Title -->
+
+                // Spacing
+
+                <View
+                    android:layout_width="@dimen/spacing_0"
+                    android:layout_height="@dimen/spacing_5" />
+
+                // Seperator
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_1"
+                    android:background="@color/colorBackground" />
+
+                // Spacing
+
+                <View
+                    android:layout_width="@dimen/spacing_0"
+                    android:layout_height="@dimen/spacing_10" />
+
+                <!-- Start of Introduction Content -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    // Spacing
+
+                    <View
+                        android:layout_width="@dimen/spacing_15"
+                        android:layout_height="@dimen/spacing_0" />
+
+                    <TextView
+                        android:id="@+id/introduction"
+                        android:layout_width="@dimen/spacing_0"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/regular"
+                        android:gravity="left"
+                        android:lineSpacingExtra="@dimen/spacing_2"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/grey_80" />
+
+                    // Spacing
+
+                    <View
+                        android:layout_width="@dimen/spacing_15"
+                        android:layout_height="@dimen/spacing_0" />
+
+                </LinearLayout>
+                <!-- End of Introduction Title -->
+
+                // Spacing
+
+                <View
+                    android:layout_width="@dimen/spacing_0"
+                    android:layout_height="@dimen/spacing_15" />
+
+            </LinearLayout>
+            <!-- End of Introduction Content View-->
+
+        </android.support.v7.widget.CardView><!-- End of Introduction View-->
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -8,6 +8,9 @@
     <color name="colorHeaderBackgroundOverlay">#33000000</color>
     <color name="colorHeaderDrawerBackgroundOverlay">#66000000</color>
     <color name="colorPortfolioItem">#EEF1F6</color>
+    <color name="colorBackground">#e6e6e6</color>
+    <color name="colorPlaceholder">#FFCCCCCC</color>
+    <color name="colorDialogBackground">#245d7f</color>
 
     <!-- Custom colors for Material Design Theme -->
     <color name="colorPrimary">#2A2E41</color>
@@ -16,7 +19,6 @@
     <color name="colorPrimaryLight">#5DBA60</color>
 
     <!-- Custom colors for Timeline and Portfolio -->
-    <color name="grey_10">#e6e6e6</color>
     <color name="grey_80">#37474F</color>
     <color name="darkOverlaySoft">#40000000</color>
     <color name="blue_grey_600">#546E7A</color>

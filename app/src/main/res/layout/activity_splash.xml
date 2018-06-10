@@ -5,30 +5,43 @@
     android:layout_height="match_parent"
     android:background="@drawable/splash">
 
+    <!-- Spacing -->
+    <View
+        android:id="@+id/spacing"
+        android:layout_width="@dimen/spacing_0"
+        android:layout_height="@dimen/spacing_150" />
+
+    // Avatar
+
     <com.mikhaellopez.circularimageview.CircularImageView
         android:id="@+id/avatar"
         android:layout_width="@dimen/spacing_100"
         android:layout_height="@dimen/spacing_100"
+        android:layout_below="@+id/spacing"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="@dimen/spacing_5"
-        android:layout_marginTop="@dimen/spacing_100"
         android:src="@drawable/profile"
         app:civ_border_color="@android:color/white"
         app:civ_border_width="@dimen/spacing_2" />
 
+    <!-- Start of Main Content -->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/avatar"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/spacing_10"
         android:gravity="center"
         android:orientation="vertical">
+
+        <!-- Spacing -->
+        <View
+            android:layout_width="@dimen/spacing_0"
+            android:layout_height="@dimen/spacing_10" />
+
+        // Name
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/spacing_10"
             android:fontFamily="@font/semi"
             android:gravity="center"
             android:text="@string/txt_name"
@@ -37,12 +50,19 @@
             android:textColor="@android:color/white"
             android:textSize="@dimen/txt_20" />
 
+        <!-- Spacing -->
+        <View
+            android:layout_width="@dimen/spacing_0"
+            android:layout_height="@dimen/spacing_5" />
+
+        <!-- Start of Sub content -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/spacing_10"
             android:gravity="center"
             android:orientation="horizontal">
+
+            // Icon
 
             <ImageView
                 android:layout_width="@dimen/spacing_16"
@@ -51,6 +71,13 @@
                 android:layout_marginRight="@dimen/spacing_5"
                 android:tint="@android:color/white"
                 app:srcCompat="@drawable/ic_android" />
+
+            <!-- Spacing -->
+            <View
+                android:layout_width="@dimen/spacing_5"
+                android:layout_height="@dimen/spacing_0" />
+
+            // Profession
 
             <TextView
                 android:layout_width="wrap_content"
@@ -62,21 +89,34 @@
                 android:textSize="@dimen/txt_16" />
 
         </LinearLayout>
+        <!-- End of Sub content -->
 
+        <!-- Spacing -->
+        <View
+            android:layout_width="@dimen/spacing_0"
+            android:layout_height="@dimen/spacing_5" />
+
+        <!-- Start of Sub content -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/spacing_25"
             android:gravity="center"
             android:orientation="horizontal">
+
+            // Icon
 
             <ImageView
                 android:layout_width="@dimen/spacing_16"
                 android:layout_height="@dimen/spacing_16"
-                android:layout_marginEnd="@dimen/spacing_5"
-                android:layout_marginRight="@dimen/spacing_5"
                 android:tint="@android:color/white"
                 app:srcCompat="@drawable/ic_location" />
+
+            <!-- Spacing -->
+            <View
+                android:layout_width="@dimen/spacing_5"
+                android:layout_height="@dimen/spacing_0" />
+
+            // Location
 
             <TextView
                 android:layout_width="wrap_content"
@@ -88,16 +128,22 @@
                 android:textSize="@dimen/txt_16" />
 
         </LinearLayout>
+        <!-- End of Sub content -->
+
+        <!-- Spacing -->
+        <View
+            android:layout_width="@dimen/spacing_0"
+            android:layout_height="@dimen/spacing_15" />
+
+        // Progressbar
 
         <com.github.ybq.android.spinkit.SpinKitView xmlns:app="http://schemas.android.com/apk/res-auto"
             style="@style/SpinKitView.Wave"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginBottom="@dimen/spacing_25"
             app:SpinKit_Color="@android:color/white" />
 
-
     </LinearLayout>
-
+    <!-- End of Main Content -->
 </RelativeLayout>

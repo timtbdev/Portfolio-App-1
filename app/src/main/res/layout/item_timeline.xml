@@ -88,7 +88,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/spacing_1"
                 android:layout_marginTop="@dimen/spacing_5"
-                android:background="@color/grey_10" />
+                android:background="@color/colorBackground" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -163,7 +163,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/spacing_1"
                 android:layout_marginTop="@dimen/spacing_5"
-                android:background="@color/grey_10" />
+                android:background="@color/colorBackground" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -181,8 +181,8 @@
                     android:orientation="horizontal">
 
                     <ImageButton
-                        android:layout_width="?attr/actionBarSize"
-                        android:layout_height="?attr/actionBarSize"
+                        android:layout_width="?android:attr/actionBarSize"
+                        android:layout_height="?android:attr/actionBarSize"
                         android:background="@android:color/transparent"
                         android:tint="@color/colorHeaderToolbar"
                         app:srcCompat="@drawable/ic_btn_web" />
@@ -202,7 +202,7 @@
                 <View
                     android:layout_width="1dp"
                     android:layout_height="match_parent"
-                    android:background="@color/grey_10" />
+                    android:background="@color/colorBackground" />
 
                 <LinearLayout
                     android:id="@+id/timeline_btn_certificate"
@@ -213,8 +213,8 @@
                     android:orientation="horizontal">
 
                     <ImageButton
-                        android:layout_width="?attr/actionBarSize"
-                        android:layout_height="?attr/actionBarSize"
+                        android:layout_width="?android:attr/actionBarSize"
+                        android:layout_height="?android:attr/actionBarSize"
                         android:background="@android:color/transparent"
                         android:tint="@color/colorHeaderToolbar"
                         app:srcCompat="@drawable/ic_btn_certificate" />
