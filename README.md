@@ -11,7 +11,9 @@ Personal Resume Android is an open-source and native Android applicaton which is
 </a>
 </div>
 </br>
-## Screenshots
+
+Screenshots
+-----------------------
 <div style="display:flex;" >
 <img  src="screenshots/1.png" width="19%" >
 <img style="margin-left:10px;" src="screenshots/2.png" width="19%" >
