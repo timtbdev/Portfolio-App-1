@@ -31,7 +31,7 @@ Screenshots
 ## Source Code
 
 <p align="center">
-  <img src="https://github.com/tumurb/Personal-Resume-Android/blob/master/screenshots/code.jpg" alt="Personal Resume App Screenshot"/>
+  <img src="https://github.com/tumurb/Personal-Resume-Android/blob/master/screenshots/source_code.png" alt="Personal Resume App Screenshot"/>
 </p>
 
 ## Download APK
