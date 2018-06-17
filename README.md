@@ -1,43 +1,38 @@
 Personal Resume Android App
 -----------------------
-
+<img src="https://github.com/tumurb/Personal-Resume-Android/blob/master/screenshots/icon.png" align="left" width="200" hspace="10" vspace="10">
 Personal Resume Android is an open-source and native Android applicaton which is mobile version of [My Personal Website](http://tumur.info), and it fetches personal information from [Web Service RestAPI](https://github.com/tumurb/Personal-Resume-Android-API) | Available on Github.
 
-This project was developed for the Android SDK Development of my independent studies.
+This project was developed for the Android SDK Development of my independent studies.<br/>
 
-## Introduction
+<div style="display:flex;" >
+<a href="https://play.google.com/store/apps/details?id=info.tumur.resume.app">
+    <img alt="Get it on Google Play"
+        height="80"
+        src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" />
+</a>
+</div>
+</br></br>
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/tumurb/Personal-Resume-Android/master/SCREENSHOTS/screenshot1.png" alt="Personal Resume App Screenshot"/>
-</p>
+## Screenshots
+<div style="display:flex;" >
+<img  src="screenshots/1.png" width="19%" >
+<img style="margin-left:10px;" src="screenshots/2.png" width="19%" >
+<img style="margin-left:10px;" src="screenshots/3.png" width="19%" >
+<img style="margin-left:10px;" src="screenshots/4.png" width="19%" >
+<img style="margin-left:10px;" src="screenshots/5.png" width="19%" >
+  
 
 ## Custom Design
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/tumurb/Personal-Resume-Android/master/SCREENSHOTS/screenshot6.jpg" alt="Personal Resume App Screenshot"/>
+  <img src="https://github.com/tumurb/Personal-Resume-Android/blob/master/screenshots/web.jpg" alt="Personal Resume App Screenshot"/>
 </p>
 
 ## Source Code
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/tumurb/Personal-Resume-Android/master/SCREENSHOTS/screenshot7.jpg" alt="Personal Resume App Screenshot"/>
-</p>
-
-## Screenshots
-<p align="center">
-  <img src="https://raw.githubusercontent.com/tumurb/Personal-Resume-Android/master/SCREENSHOTS/screenshot2.png" alt="Personal Resume App Screenshot"/>
-</p>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/tumurb/Personal-Resume-Android/master/SCREENSHOTS/screenshot3.png" alt="Personal Resume App Screenshot"/>
-</p>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/tumurb/Personal-Resume-Android/master/SCREENSHOTS/screenshot4.png" alt="Personal Resume App Screenshot"/>
-</p>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/tumurb/Personal-Resume-Android/master/SCREENSHOTS/screenshot5.png" alt="Personal Resume App Screenshot"/>
+  <img src="https://github.com/tumurb/Personal-Resume-Android/blob/master/screenshots/code.jpg" alt="Personal Resume App Screenshot"/>
 </p>
 
 ## Download APK
