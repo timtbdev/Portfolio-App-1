@@ -68,9 +68,7 @@ the option to use the gradle wrapper
 * You may also be prompted to change to the appropriate SDK folder for your local machine
 * Once the project has compiled -> run the project!
 
-
-Contributing
-============
+## Contributing
 
 #### Would you like to contribute code?
 
@@ -81,9 +79,7 @@ Contributing
 #### No code!
 * You can [discuss a bug](https://github.com/tumurb/Personal-Resume-Android/issues) or if it was not reported yet [submit a bug](https://github.com/tumurb/Personal-Resume-Android/issues/new).
 
-
-Libraries Used
-============
+## Libraries Used
 
 1. [Retrofit](http://square.github.io/retrofit/)
 2. [OkHttp](https://github.com/square/okhttp)
