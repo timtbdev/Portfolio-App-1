@@ -10,8 +10,7 @@ Personal Resume Android is an open-source and native Android applicaton which is
         src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" />
 </a>
 </div>
-</br></br>
-
+</br>
 ## Screenshots
 <div style="display:flex;" >
 <img  src="screenshots/1.png" width="19%" >
