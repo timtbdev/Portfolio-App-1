@@ -25,7 +25,7 @@ Screenshots
 ## Material Design
 
 <p align="center">
-  <img src="https://github.com/tumurb/Personal-Resume-Android/blob/master/screenshots/web.jpg" alt="Personal Resume App Screenshot"/>
+  <img src="https://github.com/tumurb/Personal-Resume-Android/blob/master/screenshots/web.png" alt="Personal Resume App Screenshot"/>
 </p>
 
 ## Source Code
