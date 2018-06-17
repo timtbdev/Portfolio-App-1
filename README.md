@@ -22,7 +22,7 @@ Screenshots
 <img style="margin-left:10px;" src="screenshots/5.png" width="19%" >
   
 
-## Custom Design
+## Material Design
 
 <p align="center">
   <img src="https://github.com/tumurb/Personal-Resume-Android/blob/master/screenshots/web.jpg" alt="Personal Resume App Screenshot"/>
