@@ -12,9 +12,27 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import info.tumur.resume.app.R;
 
+
 public class DialogUtils {
+
+    private final static int NO_INTERNET = 1; // No Internet Connection
+    private final static int NO_SERVER = 2; // NO Server Connection or Server is under maintenance
+    private final static int APP_OUTDATED = 3; // Application is outdated
+
+    @BindView(R.id.iv_dialog_icon)
+    ImageView iv_dialog_icon;
+    @BindView(R.id.tv_dialog_title)
+    TextView tv_dialog_title;
+    @BindView(R.id.tv_dialog_message)
+    TextView tv_dialog_message;
+    @BindView(R.id.btn_dialog_cancel)
+    Button btn_dialog_cancel;
+    @BindView(R.id.btn_dialog_ok)
+    Button btn_dialog_ok;
 
     private Activity activity;
 
@@ -25,7 +43,13 @@ public class DialogUtils {
     private Dialog buildDialogView(@LayoutRes int layout) {
         final Dialog dialog = new Dialog(activity);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        dialog.setContentView(layout);
+
+        //Inflating view for Butterknife bind
+        View view = View.inflate(activity, layout, null);
+        ButterKnife.bind(this, view);
+
+        //Setting view for dialog
+        dialog.setContentView(view);
         dialog.setCancelable(false);
 
         WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
@@ -37,7 +61,7 @@ public class DialogUtils {
         return dialog;
     }
 
-    // Dialog Warning for App version Update, No Internet and Server connections
+    // DialogUtils Warning for App version Update, No Internet and Server connections
     public Dialog buildDialogWarning(@StringRes int title, @StringRes int content, @StringRes int bt_text_pos, @StringRes int bt_text_neg, @DrawableRes int icon, final CallbackDialog callback) {
         String _title = null;
         String _content = null;
@@ -50,49 +74,42 @@ public class DialogUtils {
         return buildDialogWarning(_title, _content, activity.getString(bt_text_pos), _bt_text_neg, icon, callback);
     }
 
-    public Dialog buildDialogWarning(@StringRes int title, @StringRes int content, @StringRes int bt_text_pos, @DrawableRes int icon, final CallbackDialog callback) {
-        String _title = null;
-        String _content = null;
-
-        if (title != -1) _title = activity.getString(title);
-        if (content != -1) _content = activity.getString(content);
-
-        return buildDialogWarning(_title, _content, activity.getString(bt_text_pos), null, icon, callback);
-    }
-
-    // Dialog Warning for No Internet and Server connections
+    // DialogUtils Warning for No Internet and Server connections
     public Dialog buildDialogWarning(String title, String content, String bt_text_pos, String bt_text_neg, @DrawableRes int icon, final CallbackDialog callback) {
+
         final Dialog dialog = buildDialogView(R.layout.dialog_warning);
 
         // if id = -1 view will gone
-        if (title != null) {
-            ((TextView) dialog.findViewById(R.id.title)).setText(title);
+        if (title != null && !title.isEmpty()) {
+            tv_dialog_title.setText(title);
         } else {
-            dialog.findViewById(R.id.title).setVisibility(View.GONE);
+            tv_dialog_title.setVisibility(View.GONE);
         }
 
         // if id = -1 view will gone
         if (content != null) {
-            ((TextView) dialog.findViewById(R.id.content)).setText(content);
+            tv_dialog_message.setText(content);
         } else {
-            dialog.findViewById(R.id.content).setVisibility(View.GONE);
+            tv_dialog_message.setVisibility(View.GONE);
         }
-        ((Button) dialog.findViewById(R.id.bt_positive)).setText(bt_text_pos);
-        if (bt_text_neg != null) {
-            ((Button) dialog.findViewById(R.id.bt_negative)).setText(bt_text_neg);
-        } else {
-            dialog.findViewById(R.id.bt_negative).setVisibility(View.GONE);
-        }
-        ((ImageView) dialog.findViewById(R.id.icon)).setImageResource(icon);
 
-        dialog.findViewById(R.id.bt_positive).setOnClickListener(new View.OnClickListener() {
+        btn_dialog_ok.setText(bt_text_pos);
+
+        if (bt_text_neg != null) {
+            btn_dialog_cancel.setText(bt_text_neg);
+        } else {
+            btn_dialog_cancel.setVisibility(View.GONE);
+        }
+        iv_dialog_icon.setImageResource(icon);
+
+        btn_dialog_ok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 callback.onPositiveClick(dialog);
             }
         });
 
-        dialog.findViewById(R.id.bt_negative).setOnClickListener(new View.OnClickListener() {
+        btn_dialog_cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 callback.onNegativeClick(dialog);

@@ -1,112 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@android:color/white"
-    android:minWidth="@dimen/dialog_min_width"
-    android:orientation="vertical">
+    android:background="@android:color/white">
 
-    <!-- Start of Header Content -->
-    <LinearLayout
+    <!-- DialogUtils: Header with background color -->
+
+    <View
+        android:id="@+id/v_dialog_header"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/spacing_120"
         android:background="@color/colorDialogBackground"
-        android:gravity="center"
-        android:minHeight="@dimen/dialog_header_height"
-        android:orientation="horizontal">
+        android:importantForAccessibility="no"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        // Icon
 
-        <ImageView
-            android:id="@+id/icon"
-            android:layout_width="@dimen/dialog_header_image"
-            android:layout_height="@dimen/dialog_header_image" />
+    <!-- DialogUtils: Icon -->
 
-    </LinearLayout>
-    <!-- End of Header Content -->
+    <ImageView
+        android:id="@+id/iv_dialog_icon"
+        android:layout_width="@dimen/spacing_80"
+        android:layout_height="@dimen/spacing_80"
+        android:clickable="false"
+        android:contentDescription="@string/txt_warning_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/v_dialog_header"
+        app:layout_constraintEnd_toEndOf="@id/v_dialog_header"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/v_dialog_header"
+        app:layout_constraintTop_toTopOf="@id/v_dialog_header"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="@drawable/ic_placeholder_dialog_icon" />
 
-    <!-- Spacing -->
-    <View
-        android:layout_width="@dimen/spacing_0"
-        android:layout_height="@dimen/spacing_10" />
+    <!-- DialogUtils: Title -->
 
-    <!-- Start of Message Content -->
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/tv_dialog_title"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/spacing_5"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:layout_marginTop="@dimen/spacing_8"
+        android:clickable="false"
+        android:fontFamily="@font/semi"
+        android:text="@string/txt_placeholder"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@color/colorHeaderText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/v_dialog_header" />
 
-        // Title
 
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/semi"
-            android:textAppearance="@style/TextAppearance.AppCompat.Title"
-            android:textColor="@color/colorHeaderText" />
+    <!-- DialogUtils: Message -->
 
-        <!-- Spacing -->
-        <View
-            android:layout_width="@dimen/spacing_0"
-            android:layout_height="@dimen/spacing_10" />
-
-        // Description
-
-        <TextView
-            android:id="@+id/content"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/regular"
-            android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-            android:textColor="@color/colorHeaderText" />
-
-    </LinearLayout>
-    <!-- End of Message Content -->
-
-    <!-- Spacing -->
-    <View
-        android:layout_width="@dimen/spacing_0"
-        android:layout_height="@dimen/spacing_10" />
-
-    <!-- Start of Button Content -->
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/tv_dialog_message"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal">
+        android:layout_margin="@dimen/spacing_8"
+        android:clickable="false"
+        android:fontFamily="@font/regular"
+        android:padding="@dimen/spacing_2"
+        android:singleLine="false"
+        android:text="@string/txt_long_placeholder"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        android:textColor="@color/colorHeaderText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dialog_title" />
 
-        // Cancel Button
+    <!-- DialogUtils: Cancel button -->
 
-        <Button
-            android:id="@+id/bt_negative"
-            style="@style/Base.Widget.AppCompat.Button.Borderless"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/semi"
-            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-            android:textColor="@color/colorHeaderText" />
+    <Button
+        android:id="@+id/btn_dialog_cancel"
+        style="@style/Base.Widget.AppCompat.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/txt_btn_cancel"
+        android:fontFamily="@font/semi"
+        android:text="@string/txt_placeholder_btn_cancel"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        android:textColor="@color/colorHeaderText"
+        app:layout_constraintEnd_toStartOf="@+id/btn_dialog_ok"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintHorizontal_weight="5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dialog_message" />
 
-        // Retry Button
+    <!-- DialogUtils: Okay button -->
 
-        <Button
-            android:id="@+id/bt_positive"
-            style="@style/Base.Widget.AppCompat.Button.Borderless"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/semi"
-            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-            android:textColor="@color/colorHeaderText" />
+    <Button
+        android:id="@+id/btn_dialog_ok"
+        style="@style/Base.Widget.AppCompat.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/txt_btn_ok"
+        android:fontFamily="@font/semi"
+        android:text="@string/txt_placeholder_btn_ok"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        android:textColor="@color/colorHeaderText"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_dialog_cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="5"
+        app:layout_constraintStart_toEndOf="@+id/btn_dialog_cancel"
+        app:layout_constraintTop_toTopOf="@+id/btn_dialog_cancel" />
 
-    </LinearLayout>
-    <!-- End of Button Content -->
-
-    <!-- Spacing -->
-    <View
-        android:layout_width="@dimen/spacing_0"
-        android:layout_height="@dimen/spacing_10" />
-
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>

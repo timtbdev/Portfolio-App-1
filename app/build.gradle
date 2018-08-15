@@ -12,6 +12,7 @@ android {
         vectorDrawables.useSupportLibrary = true
         versionCode 4
         versionName "1.2"
+        multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -34,7 +35,7 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
@@ -46,20 +47,24 @@ dependencies {
     implementation 'com.android.support:recyclerview-v7:27.1.1'
     implementation 'com.android.support:support-v4:27.1.1'
     implementation 'com.android.support:support-vector-drawable:27.1.1'
-    implementation 'com.google.android.gms:play-services-analytics:16.0.0'
+
 
     // WEB SERVICE API Libraries
-    implementation 'com.google.code.gson:gson:2.8.1'
+    implementation 'com.google.code.gson:gson:2.8.2'
     implementation 'com.squareup.retrofit2:retrofit:2.3.0'
     implementation 'com.squareup.okhttp3:logging-interceptor:3.6.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+
+    //BUTTERKNIFE Libraries
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 
     // GLIDE IMAGE Library
     implementation 'com.github.bumptech.glide:glide:4.6.1'
 
     // FIREBASE Libraries
-    implementation 'com.google.firebase:firebase-core:16.0.0'
-    implementation 'com.crashlytics.sdk.android:crashlytics:2.9.3'
+    implementation 'com.google.firebase:firebase-core:16.0.1'
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.9.4'
 
     //LOADER ANIMATION Library
     implementation 'com.github.ybq:Android-SpinKit:1.1.0'
@@ -67,5 +72,6 @@ dependencies {
     //OTHER UI Libraries
     implementation 'com.balysv:material-ripple:1.0.2'
     implementation 'com.mikhaellopez:circularimageview:3.0.2'
+
 }
 apply plugin: 'com.google.gms.google-services'

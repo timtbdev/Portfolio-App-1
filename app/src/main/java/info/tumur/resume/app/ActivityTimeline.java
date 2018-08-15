@@ -52,7 +52,7 @@ public class ActivityTimeline extends AppCompatActivity {
     private View lyt_no_connect;
     private View lyt_no_item;
     private View lyt_main_content;
-    private Dialog dialog = null; // Dialog for No Internet, Server connection and no item
+    private Dialog dialog = null; // DialogUtils for No Internet, Server connection and no item
     //Variables for Callbacks and API services
     private Call<CallbackTimeline> callbackCallTimeLine = null; // Callback for Timeline data
     // UI for Timeline
@@ -195,12 +195,12 @@ public class ActivityTimeline extends AppCompatActivity {
         if (!NetworkCheck.isConnect(this)) {
             // Hide Progressbar and show No Internet Connection Layout
             showProgressBar(false, true, false, false, false);
-            // Show Dialog for No Internet Connection
+            // Show DialogUtils for No Internet Connection
             showDialogNoInternetConnection();
         } else {
             // Hide Progressbar and show No Server Connection Layout
             showProgressBar(false, false, true, false, false);
-            // Show Dialog for No Server Connection
+            // Show DialogUtils for No Server Connection
             showDialogNoServerConnection();
         }
     }
@@ -230,7 +230,7 @@ public class ActivityTimeline extends AppCompatActivity {
         }
     }
 
-    // Show Dialog for no server connection
+    // Show DialogUtils for no server connection
     public void showDialogNoServerConnection() {
         if (dialog != null && dialog.isShowing()) return;
         dialog = new DialogUtils(this).buildDialogWarning(R.string.txt_unable_connect, R.string.msg_unable_connect, R.string.txt_try_again, R.string.txt_close, R.drawable.ic_no_connect, new CallbackDialog() {
@@ -249,7 +249,7 @@ public class ActivityTimeline extends AppCompatActivity {
     }
 
 
-    // Show Dialog for no internet connection
+    // Show DialogUtils for no internet connection
     public void showDialogNoInternetConnection() {
         if (dialog != null && dialog.isShowing()) return;
         dialog = new DialogUtils(this).buildDialogWarning(R.string.txt_no_internet, R.string.msg_no_internet, R.string.txt_try_again, R.string.txt_close, R.drawable.ic_no_internet, new CallbackDialog() {

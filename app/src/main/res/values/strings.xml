@@ -3,10 +3,23 @@
     <!--App Name -->
     <string name="txt_app_name">Resume Alex</string>
 
+    <!--Content for placeholder -->
+    <string name="txt_placeholder">Lorem ipsum</string>
+    <string name="txt_long_placeholder">Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</string>
+    <string name="txt_placeholder_btn_cancel">Cancel</string>
+    <string name="txt_placeholder_btn_ok">Ok</string>
+
+    <!--Content descriptions for Accessibility -->
+    <string name="txt_profile">Profile picture</string>
+    <string name="txt_progressbar">Progressbar</string>
+    <string name="txt_warning_icon">Dialog Warning icon</string>
+    <string name="txt_btn_ok">Ok Button</string>
+    <string name="txt_btn_cancel">Cancel Button</string>
+
     <!--All data for ActivitySplash -->
     <string name="txt_name">Tumur.B (Alex)</string>
     <string name="txt_android">Android Developer</string>
-    <string name="txt_location">San Francisco Bay Area, CA</string>
+    <string name="txt_location">Hayward, CA</string>
 
     <!--All data for ActivityMain -->
     <string name="txt_summary_skills">Technical skills</string>
@@ -43,5 +56,6 @@
     <!--All data ActivityPortfolioItem.java -->
     <string name="txt_features">features</string>
     <string name="txt_description">description</string>
+
 
 </resources>
