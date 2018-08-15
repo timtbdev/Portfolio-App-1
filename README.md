@@ -1,51 +1,44 @@
 Personal Resume Android App
 -----------------------
-[![Build Status](https://travis-ci.org/tumurb/Personal-Resume-Android.svg?branch=master)](https://travis-ci.org/tumurb/Personal-Resume-Android)
+<img src="https://github.com/tumurb/Personal-Resume-Android/blob/master/screenshots/icon.png" align="left" width="200" hspace="10" vspace="10">
+Personal Resume Android is an open-source and native Android applicaton which is mobile version of <a href="http://tumur.info">My Personal Website</a> ( <a href="https://github.com/tumurb/Personal-Website-PHP">Available on Github</a> ), and it fetches personal information from <a href="http://tumur.info/services/timeline/?id=1">REST API</a> ( <a href="https://github.com/tumurb/Personal-Resume-Android-API">Available on Github</a> ). This project was developed for my independent studies in Android Development<br/>
 
-Personal Resume Android is an open-source and native Android applicaton which is mobile version of [My Personal Website](http://tumur.info), and it fetches personal information from [Web Service RestAPI](https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/) | Available on Github.
+<div style="display:flex;" >
+<a href="https://play.google.com/store/apps/details?id=info.tumur.resume.app">
+    <img alt="Get it on Google Play"
+        height="80"
+        src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" />
+</a>
+</div>
+</br>
 
-This project was developed for the Android SDK Development of my independent studies.
+Screenshots
+-----------------------
+<div style="display:flex;" >
+<img  src="screenshots/1.png" width="19%" >
+<img style="margin-left:10px;" src="screenshots/2.png" width="19%" >
+<img style="margin-left:10px;" src="screenshots/3.png" width="19%" >
+<img style="margin-left:10px;" src="screenshots/4.png" width="19%" >
+<img style="margin-left:10px;" src="screenshots/5.png" width="19%" >
+  
 
-## Introduction
+## Material Design
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/tumurb/Personal-Resume-Android/master/SCREENSHOTS/screenshot1.png" alt="Personal Resume App Screenshot"/>
-</p>
-
-## Custom Design
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/tumurb/Personal-Resume-Android/master/SCREENSHOTS/screenshot6.jpg" alt="Personal Resume App Screenshot"/>
+  <img src="https://github.com/tumurb/Personal-Resume-Android/blob/master/screenshots/web.png" alt="Personal Resume App Screenshot"/>
 </p>
 
 ## Source Code
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/tumurb/Personal-Resume-Android/master/SCREENSHOTS/screenshot7.jpg" alt="Personal Resume App Screenshot"/>
-</p>
-
-## Screenshots
-<p align="center">
-  <img src="https://raw.githubusercontent.com/tumurb/Personal-Resume-Android/master/SCREENSHOTS/screenshot2.png" alt="Personal Resume App Screenshot"/>
-</p>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/tumurb/Personal-Resume-Android/master/SCREENSHOTS/screenshot3.png" alt="Personal Resume App Screenshot"/>
-</p>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/tumurb/Personal-Resume-Android/master/SCREENSHOTS/screenshot4.png" alt="Personal Resume App Screenshot"/>
-</p>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/tumurb/Personal-Resume-Android/master/SCREENSHOTS/screenshot5.png" alt="Personal Resume App Screenshot"/>
+  <img src="https://github.com/tumurb/Personal-Resume-Android/blob/master/screenshots/source_code.png" alt="Personal Resume App Screenshot"/>
 </p>
 
 ## Download APK
 You can download the apk from: 
 
 1. [Google Playstore](https://play.google.com/store/apps/details?id=info.tumur.resume.app)
-2. [Github Release](https://github.com/tumurb/Personal-Resume-Android/blob/master/app/release/app-release.apk)
+2. [Github Release](https://github.com/tumurb/Personal-Resume-Android/blob/master/app/release/Resume%201.2.apk)
 
 
 ## Requirements
@@ -75,9 +68,7 @@ the option to use the gradle wrapper
 * You may also be prompted to change to the appropriate SDK folder for your local machine
 * Once the project has compiled -> run the project!
 
-
-Contributing
-============
+## Contributing
 
 #### Would you like to contribute code?
 
@@ -88,9 +79,7 @@ Contributing
 #### No code!
 * You can [discuss a bug](https://github.com/tumurb/Personal-Resume-Android/issues) or if it was not reported yet [submit a bug](https://github.com/tumurb/Personal-Resume-Android/issues/new).
 
-
-Libraries Used
-============
+## Libraries Used
 
 1. [Retrofit](http://square.github.io/retrofit/)
 2. [OkHttp](https://github.com/square/okhttp)
