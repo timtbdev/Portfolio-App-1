@@ -4,11 +4,7 @@ Personal Resume Android App
 Personal Resume Android is an open-source and native Android applicaton which is mobile version of <a href="http://tumur.info">My Personal Website</a> ( <a href="https://github.com/tumurb/Personal-Website-PHP">Available on Github</a> ), and it fetches personal information from <a href="http://tumur.info/services/timeline/?id=1">REST API</a> ( <a href="https://github.com/tumurb/Personal-Resume-Android-API">Available on Github</a> ). This project was developed for my independent studies in Android Development<br/>
 
 <div style="display:flex;" >
-<a href="https://play.google.com/store/apps/details?id=info.tumur.resume.app">
-    <img alt="Get it on Google Play"
-        height="80"
-        src="https://drive.google.com/file/d/1k42IA8ypeBl-idalp9RRwxPzz3UugQCw/view?usp=sharing" />
-</a>
+<a href="https://drive.google.com/file/d/1k42IA8ypeBl-idalp9RRwxPzz3UugQCw/view?usp=sharing">Get the APK</a>
 </div>
 </br>
 
