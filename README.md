@@ -7,7 +7,7 @@ Personal Resume Android is an open-source and native Android applicaton which is
 <a href="https://play.google.com/store/apps/details?id=info.tumur.resume.app">
     <img alt="Get it on Google Play"
         height="80"
-        src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" />
+        src="https://drive.google.com/file/d/1k42IA8ypeBl-idalp9RRwxPzz3UugQCw/view?usp=sharing" />
 </a>
 </div>
 </br>
@@ -36,9 +36,7 @@ Screenshots
 
 ## Download APK
 You can download the apk from: 
-
-1. [Google Playstore](https://play.google.com/store/apps/details?id=info.tumur.resume.app)
-2. [Github Release](https://github.com/tumurb/Personal-Resume-Android/blob/master/app/release/Resume%201.2.apk)
+1. [APK Release](https://drive.google.com/file/d/1k42IA8ypeBl-idalp9RRwxPzz3UugQCw/view?usp=sharing)
 
 
 ## Requirements
