@@ -13,9 +13,8 @@ Personal App 1.0 is an open-source and native Android applicaton which is mobile
 
 ## 📸 SCREENSHOTS
 <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-app-147b5.appspot.com/o/screenshots%2Fportfolio1.0%2Fs-01.png?alt=media&token=640a48d8-8d1c-4a74-ac8e-51b5105d418b" width="250"/> <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-app-147b5.appspot.com/o/screenshots%2Fportfolio1.0%2Fs-02.png?alt=media&token=f9c780f4-c054-453e-b6e6-094d15637a49" width="250"/> <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-app-147b5.appspot.com/o/screenshots%2Fportfolio1.0%2Fs-03.png?alt=media&token=5ccdc32b-916e-4ddc-a701-b8a3bb7c523c" width="250"/>
-<img src="https://firebasestorage.googleapis.com/v0/b/portfolio-app-147b5.appspot.com/o/screenshots%2Fportfolio1.0%2Fs-04.png?alt=media&token=e53147bb-d135-4335-a170-33adbbc4518b"/> <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-app-147b5.appspot.com/o/screenshots%2Fportfolio1.0%2Fs-05.png?alt=media&token=ced44065-15bd-4bf2-90b5-2ff4ce9d217f" width="250"/> <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-app-147b5.appspot.com/o/screenshots%2Fportfolio1.0%2Fs-06.png?alt=media&token=dfcba3f7-613e-42a7-b4e5-98baa5d75c64" width="250"/>
+<img src="https://firebasestorage.googleapis.com/v0/b/portfolio-app-147b5.appspot.com/o/screenshots%2Fportfolio1.0%2Fs-04.png?alt=media&token=e53147bb-d135-4335-a170-33adbbc4518b" width="250"/> <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-app-147b5.appspot.com/o/screenshots%2Fportfolio1.0%2Fs-05.png?alt=media&token=ced44065-15bd-4bf2-90b5-2ff4ce9d217f" width="250"/> <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-app-147b5.appspot.com/o/screenshots%2Fportfolio1.0%2Fs-06.png?alt=media&token=dfcba3f7-613e-42a7-b4e5-98baa5d75c64" width="250"/>
  
-
 ## Download APK
 You can download the apk from: 
 1. [APK Release](https://drive.google.com/file/d/1k42IA8ypeBl-idalp9RRwxPzz3UugQCw/view?usp=sharing)
