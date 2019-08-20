@@ -8,27 +8,13 @@ Personal App 1.0 is an open-source and native Android applicaton which is mobile
 </div>
 </br>
 
-Screenshots
------------------------
-<div style="display:flex;" >
-<img  src="screenshots/1.png" width="19%" >
-<img style="margin-left:10px;" src="screenshots/2.png" width="19%" >
-<img style="margin-left:10px;" src="screenshots/3.png" width="19%" >
-<img style="margin-left:10px;" src="screenshots/4.png" width="19%" >
-<img style="margin-left:10px;" src="screenshots/5.png" width="19%" >
-  
+## 📽️ PREVIEW
+[![Portfolio App 2.0](https://firebasestorage.googleapis.com/v0/b/portfolio-app-147b5.appspot.com/o/screenshots%2Fportfolio1.0%2Fy2.png?alt=media&token=95ec71c2-516d-420a-b4a9-52f8b3af85d8)](https://youtu.be/j56fSGqF7Ho "Portfolio App 1.0 - Click to Watch!")
 
-## Material Design
-
-<p align="center">
-  <img src="https://github.com/tumurb/Personal-Resume-Android/blob/master/screenshots/web.png" alt="Personal Resume App Screenshot"/>
-</p>
-
-## Source Code
-
-<p align="center">
-  <img src="https://github.com/tumurb/Personal-Resume-Android/blob/master/screenshots/source_code.png" alt="Personal Resume App Screenshot"/>
-</p>
+## 📸 SCREENSHOTS
+<img src="https://firebasestorage.googleapis.com/v0/b/portfolio-app-147b5.appspot.com/o/screenshots%2Fportfolio1.0%2Fs-01.png?alt=media&token=640a48d8-8d1c-4a74-ac8e-51b5105d418b" width="250"/> <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-app-147b5.appspot.com/o/screenshots%2Fportfolio1.0%2Fs-02.png?alt=media&token=f9c780f4-c054-453e-b6e6-094d15637a49" width="250"/> <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-app-147b5.appspot.com/o/screenshots%2Fportfolio1.0%2Fs-03.png?alt=media&token=5ccdc32b-916e-4ddc-a701-b8a3bb7c523c" width="250"/>
+<img src="https://firebasestorage.googleapis.com/v0/b/portfolio-app-147b5.appspot.com/o/screenshots%2Fportfolio1.0%2Fs-04.png?alt=media&token=e53147bb-d135-4335-a170-33adbbc4518b"/> <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-app-147b5.appspot.com/o/screenshots%2Fportfolio1.0%2Fs-05.png?alt=media&token=ced44065-15bd-4bf2-90b5-2ff4ce9d217f" width="250"/> <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-app-147b5.appspot.com/o/screenshots%2Fportfolio1.0%2Fs-06.png?alt=media&token=dfcba3f7-613e-42a7-b4e5-98baa5d75c64" width="250"/>
+ 
 
 ## Download APK
 You can download the apk from: 
