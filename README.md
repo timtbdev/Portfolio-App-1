@@ -3,10 +3,19 @@ Portfolio App 1.0
 <img src="https://github.com/tumurb/Personal-Resume-Android/blob/master/screenshots/icon.png" align="left" width="200" hspace="10" vspace="10">
 Personal App 1.0 is an open-source and native Android applicaton which is mobile version of <a href="http://tumur.info">My Personal Website</a> ( <a href="https://github.com/tumurb/Personal-Website-PHP">Available on Github</a> ), and it fetches personal information from <a href="http://tumur.info/services/timeline/?id=1">REST API</a> ( <a href="https://github.com/tumurb/Personal-Resume-Android-API">Available on Github</a> ). This project was developed for my independent studies in Android Development<br/>
 
+<br/>
 <div style="display:flex;" >
-<a href="https://drive.google.com/file/d/1k42IA8ypeBl-idalp9RRwxPzz3UugQCw/view?usp=sharing">Get the APK</a>
+<a target="_blank" href="https://drive.google.com/file/d/1k42IA8ypeBl-idalp9RRwxPzz3UugQCw/view?usp=sharing">
+    <img alt="Get it on Google Play"
+        height="80"
+        src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" />
+</a>
+<a target="_blank" href="https://8io.co/d">
+    <img alt="Visit Web"
+        height="80"
+        src="https://firebasestorage.googleapis.com/v0/b/ioco-5c746.appspot.com/o/visit_web.png?alt=media&token=c2c56c2e-f891-4761-b430-731840eda9a0" />
+</a>
 </div>
-</br>
 
 ## 📽️ PREVIEW
 [![Portfolio App 2.0](https://firebasestorage.googleapis.com/v0/b/portfolio-app-147b5.appspot.com/o/screenshots%2Fportfolio1.0%2Fy2.png?alt=media&token=95ec71c2-516d-420a-b4a9-52f8b3af85d8)](https://youtu.be/j56fSGqF7Ho "Portfolio App 1.0 - Click to Watch!")
